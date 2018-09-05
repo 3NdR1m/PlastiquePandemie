@@ -2,12 +2,18 @@ body {
 	margin: 0px;
 }
 
+h1 {
+	margin: 0px;
+	text-shadow: 1px 1px 9px #777
+}
+
 header {
 	background-color: #4d4d4d; 
 	color: white;
 	text-align: center;
 	height: 50px;
 	margin: 0px auto;
+	padding: 0px;
 }
 
 nav {
