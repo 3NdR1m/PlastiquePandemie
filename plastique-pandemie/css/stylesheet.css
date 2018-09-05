@@ -1,8 +1,29 @@
+body {
+	margin: 0px;
+}
+
 header {
 	background-color: black; 
 	color: white;
 }
 
 nav {
+	background: gray;
 	width: 100%;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+nav a {
+	float: left;
+	color: aliceblue;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	padding: 17px 19px;
+}
+
+nav a:hover{
+	background-color: cadetblue;
+} 
