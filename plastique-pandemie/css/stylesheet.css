@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 body { 
+=======
+body {
+>>>>>>> 9c90d6d16bd3c37d4e801a85ef989684e8dbb019
 	margin: 0px;
 }
 
@@ -11,5 +15,22 @@ header {
 }
 
 nav {
+	background: gray;
 	width: 100%;
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+nav a {
+	float: left;
+	color: aliceblue;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	padding: 17px 19px;
+}
+
+nav a:hover{
+	background-color: cadetblue;
+} 
