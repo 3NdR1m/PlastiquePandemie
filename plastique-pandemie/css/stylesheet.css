@@ -1,7 +1,13 @@
+body { 
+	margin: 0px;
+}
+
 header {
 	background-color: #4d4d4d; 
 	color: white;
 	text-align: center;
+	height: 50px;
+	margin: 0px auto;
 }
 
 nav {
