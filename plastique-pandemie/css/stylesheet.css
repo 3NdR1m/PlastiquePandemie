@@ -17,15 +17,17 @@ header {
 	padding: 0px;
 }
 
-nav {
+.nav {
 	background: gray;
 	width: 100%;
 	margin: 0;
     padding: 0;
     overflow: hidden;
+	min-height: 50px;
+	max-height: 50px;
 }
 
-nav a {
+.navA {
 	float: left;
 	color: aliceblue;
 	text-align: center;
@@ -34,6 +36,6 @@ nav a {
 	padding: 17px 19px;
 }
 
-nav a:hover{
+.navA:hover{
 	background-color: cadetblue;
 } 
