@@ -28,9 +28,11 @@ nav {
 	margin: 0;
     padding: 0;
     overflow: hidden;
+	min-height: 40px;
+	max-height: 40px;
 }
 
-nav a {
+.nav a {
 	float: left;
 	color: aliceblue;
 	text-align: center;
@@ -39,7 +41,7 @@ nav a {
 	padding: 17px 19px;
 }
 
-nav a:hover{
+.nav a:hover{
 	background-color: cadetblue;
 }
 
