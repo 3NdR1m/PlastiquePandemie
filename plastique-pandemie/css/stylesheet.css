@@ -1,6 +1,14 @@
+body,html {
+	min-height: 100%;
+}
+
 body { 
 	margin: 0px;
-	background-image: linear-gradient (#4d4d4d, #ffffff);
+}
+
+.container {
+	background-image: linear-gradient(#303030, #ffffff, #303030);
+	backgr
 }
 
 h1 {
@@ -38,4 +46,8 @@ header {
 
 .navA:hover{
 	background-color: cadetblue;
-} 
+}
+
+.active {
+	background: #303030;
+}

@@ -1,6 +1,8 @@
+# Domaine #
 URL: plastiquepandemie.org
 Coût: 7.99$
 
+forgotyournamesry - #UsefullLink:
 https://en.wikipedia.org/wiki/Pollution#/media/File:Litter.JPG
 
 https://www.youtube.com/watch?v=TS9PWzkUG2s
@@ -8,7 +10,7 @@ https://www.youtube.com/watch?v=TS9PWzkUG2s
 https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
 
 
-#Navbar:
+Benjamin - #Navbar:
 <nav id="navbar">
       <a href="index.html">Acceuil</a>
       <a href="problematique.html">Le Problème</a>
