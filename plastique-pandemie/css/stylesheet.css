@@ -6,11 +6,6 @@ body {
 	margin: 0px;
 }
 
-.container {
-	background-image: linear-gradient(#303030, #ffffff, #303030);
-	backgr
-}
-
 h1 {
 	margin: 0px;
 	text-shadow: 1px 1px 9px #777
@@ -25,7 +20,9 @@ header {
 	padding: 0px;
 }
 
+/* Region nav bar */
 nav {
+	position: fixed;
 	background: gray;
 	width: 100%;
 	margin: 0;
@@ -49,3 +46,4 @@ nav a:hover{
 .active {
 	background: #303030;
 }
+/* */
