@@ -31,8 +31,8 @@ header {
 	margin: 0;
     padding: 0;
     overflow: hidden;
-	min-height: 50px;
-	max-height: 50px;
+	min-height: 40px;
+	max-height: 40px;
 }
 
 .navA {
