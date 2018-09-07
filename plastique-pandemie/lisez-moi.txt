@@ -12,6 +12,7 @@ https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
 
 Benjamin - #Navbar:
 <nav id="navbar">
+<<<<<<< HEAD
     <a href="index.html">Acceuil</a>
     <a href="problematique.html">Le Problème</a>
     <a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
@@ -20,3 +21,17 @@ Benjamin - #Navbar:
     <a href="carriere-et-benevolat.html">Carrière et bénévolat</a>
     <script>$(`a[href$="${location.href.split("/").slice(-1)}"]`).addClass("active");</script>
 </nav>
+=======
+      <a href="index.html">Acceuil</a>
+      <a href="problematique.html">Le Problème</a>
+      <a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
+      <a href="video-polution-ocean.html">Vidéos</a>
+      <a href="contact.html">Contact</a>
+      <a href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+      <script>$(`a[href$="${location.href.split("/").slice(-1)}"]`).addClass("active");</script>
+    </nav>
+	
+	#Nav and Footer Link
+			<object width="100%" data="htmlRessource/nav.html"> </object>
+			<object width="100%" data="htmlRessource/Footer.html"> </object>
+>>>>>>> a93c90da5c89a7b210056c43c5bd0e82224a3a6e
