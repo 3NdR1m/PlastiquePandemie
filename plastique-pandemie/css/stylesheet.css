@@ -32,7 +32,7 @@ nav {
 	background-color: #303030;
 }
 
-nav a {
+nav.a {
 	float: left;
 	text-decoration: none;
 	background: gray;
@@ -40,7 +40,7 @@ nav a {
 	padding: 17px 19px;
 }
 
-nav a:hover{
+nav.a:hover{
 	background-color: cadetblue;
 }
 
