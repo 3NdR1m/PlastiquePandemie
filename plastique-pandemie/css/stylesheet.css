@@ -4,6 +4,7 @@ body,html {
 
 body { 
 	margin: 0px;
+	background-image: linear-gradient(aliceblue, white);
 }
 
 h1 {
@@ -19,6 +20,11 @@ header {
 	height: 50px;
 	margin: 0px auto;
 	padding: 0px;
+	min-width: 100%;
+}
+
+.container {
+	margin: 0px 9vw 0px 9vw;
 }
 
 /* Region nav bar */
@@ -29,7 +35,8 @@ nav {
 	text-align: center;
 	text-decoration: none;
 	display: block;
-	background-color: #303030;
+	background-color: #3d3d3d;
+	/*padding-bottom: 1px;*/
 }
 
 nav a {
