@@ -9,17 +9,15 @@ body {
 
 h1 {
 	width: 100%;
-	margin: 0px;
-	text-shadow: 1px 1px 9px #777
+	text-shadow: 1px 1px 9px #777;
 }
 
 header {
-	background-color: #4d4d4d; 
+	background-color: #3d3d3d; 
 	color: white;
 	text-align: center;
-	height: 50px;
 	margin: 0px auto;
-	padding: 0px;
+	padding: 1px 0px 1px 0px;
 	min-width: 100%;
 }
 
@@ -35,19 +33,19 @@ nav {
 	text-align: center;
 	text-decoration: none;
 	display: block;
-	background-color: #3d3d3d;
+	background: gray;
 	/*padding-bottom: 1px;*/
 }
 
-nav.a {
+nav a {
 	float: left;
 	text-decoration: none;
-	background: gray;
+	background: darkgray;
 	color: aliceblue;
 	padding: 17px 19px;
 }
 
-nav.a:hover{
+nav a:hover{
 	background-color: cadetblue;
 }
 
