@@ -3,18 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Plastique Pandemie - Problématique</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta name="description" content="En quoi la polution océanique est-elle un problème">
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
   <body>
-    <nav>
-        <a href="index.html">Acceuil</a>
-        <a href="problematique.html">Le Problème</a>
-        <a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
-        <a href="index.html">Vidéos</a>
-        <a href="index.html">Contact</a>
-        <a href="index.html">Carrière et bénévolat</a>
-    </nav>
+      <header>
+          <h1> Pandemie Plastique </h1>
+          <nav id="navbar">
+            <a href="index.html">Acceuil</a>
+            <a href="problematique.html">Le Problème</a>
+            <a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
+            <a href="video-polution-ocean.html">Vidéos</a>
+            <a href="contact.html">Contact</a>
+            <a href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+          <script>$(`a[href$="${location.href.split("/").slice(-1)}"]`).addClass("active");</script>
+        </nav>
+    </header>
     <p>
       
     </p>

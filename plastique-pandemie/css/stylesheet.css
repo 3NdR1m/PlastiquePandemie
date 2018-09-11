@@ -4,7 +4,7 @@ body,html {
 
 body { 
 	margin: 0px;
-	background-image: linear-gradient(aliceblue, white);
+	text-align: center;
 }
 
 h1 {
@@ -21,8 +21,21 @@ header {
 	min-width: 100%;
 }
 
-.container {
-	margin: 0px 9vw 0px 9vw;
+
+/* Region Form */
+form {
+	background-color: #3d3d3d;
+	border: 3px groove cadetblue;
+	color: white;
+	/*width: fit-content;*/
+}
+
+fieldset {
+	border: 2px groove cadetblue;
+}
+/* region Footer */
+footer {
+	bottom: 0px;
 }
 
 /* Region nav bar */

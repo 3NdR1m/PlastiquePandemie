@@ -1,1 +1,52 @@
-(!DOCTYPE html)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plastique Pandemie - Problématique</title>
+    <meta name="description" content="En quoi la polution océanique est-elle un problème">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+    <body>
+    <header>
+      <h1> Pandemie Plastique </h1>
+      <nav id="navbar">
+          <a href="index.html">Acceuil</a>
+          <a href="problematique.html">Le Problème</a>
+          <a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
+          <a href="video-polution-ocean.html">Vidéos</a>
+          <a href="contact.html">Contact</a>
+          <a href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+        <script>$(`a[href$="${location.href.split("/").slice(-1)}"]`).addClass("active");</script>
+      </nav>
+    </header>
+    <h2>Suivez-nous sur facebook!</h2>
+    <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    <h2>Ou Contactez-nous:</h2>
+    <form action="" method="post" id="form">
+      <fieldset>
+      <legend>Information sur vous:</legend>
+      Prénom:<br>
+      <input type="text" name="prénom" maxlength=60 required><br>
+      Nom:<br>
+      <input type="text" name="nom" maxlength=60 required><br>
+      Email:<br>
+      <input type="email" name="email" required><br>
+      </fieldset>
+      <fieldset>
+          <legend>Messages:</legend>
+          Sujet:<br>
+          <select name="sujet" required>
+              <option value="Webmestre">Webmestre</option>
+              <option value="Évènements">Évènements</option>
+              <option value="Conférences">Conférences</option>
+            </select><br>
+          Contenue:<br>
+          <textarea name="message" form="form" required></textarea>
+          </fieldset>
+      <input type="reset" value="Réinitialiser"> <input type="submit" value="Envoyer">
+    </form>
+
+  </body>
+</html>
