@@ -40,32 +40,3 @@ footer {
 	background-color: #222;
 	color: white;
 }
-
-/* Region nav bar */
-nav {
-	width: 100%;
-	float: left;
-	color: aliceblue;
-	text-align: center;
-	text-decoration: none;
-	display: block;
-	background: gray;
-	/*padding-bottom: 1px;*/
-}
-
-nav a {
-	float: left;
-	text-decoration: none;
-	background: darkgray;
-	color: aliceblue;
-	padding: 17px 19px;
-}
-
-nav a:hover{
-	background-color: cadetblue;
-}
-
-.active {
-	background: #303030;
-}
-/* */
