@@ -1,3 +1,7 @@
+#linear-gradient {
+	background: linear-gradient (white, grey);
+}
+
 body, html {
 	min-height: 100%;
 }
@@ -39,4 +43,11 @@ footer {
 	bottom: 0px;
 	background-color: #222;
 	color: white;
+}
+
+.border-round { 
+    border-radius: 27px;
+	border: 2px solid #73AD21;
+    padding: 20px; 
+	margin: 20px;
 }
