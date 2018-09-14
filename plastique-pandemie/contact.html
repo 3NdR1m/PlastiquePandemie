@@ -10,6 +10,7 @@
     <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <img src="">
           <a class="navbar-brand" href="#">Plastique Pandemie</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,21 +34,23 @@
       <h2>Ou Contactez-nous:</h2>
       <form action="" method="post" id="form">
 
-        <label>Nom:</label>
-        <div class="form-row">
-          <div class="col">
-            <input name="prenom" class="form-control" type="text" placeholder="Prénom" maxlength="60" required>
+        <fieldset>
+          <legend>informations</legend>
+          <label>Nom:</label>
+          <div class="form-row">
+            <div class="col-sm-2">
+              <input name="prenom" class="form-control" type="text" placeholder="Prénom" maxlength="60" required>
+            </div>
+            <div class="col-sm-2">
+              <input name="nom" class="form-control" type="text" placeholder="Nom" maxlength="60" required>
+            </div>
           </div>
-          <div class="col">
-            <input name="nom" class="form-control" type="text" placeholder="Nom" maxlength="60" required>
+          <div class="form-group">
+            <label for="_email">Addresse Email:</label>
+            <input type="email" name="email" class="form-control" id="_email" aria-describedby="emailHelp" placeholder="Entrée votre addresse électronique" required>
+            <small id="emailHelp" class="form-text text-muted">Nous ne divulgon pas ces info.</small>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="_email">Addresse Email:</label>
-          <input type="email" name="email" class="form-control" id="_email" aria-describedby="emailHelp" placeholder="Entrée votre addresse électronique" required>
-          <small id="emailHelp" class="form-text text-muted">Nous ne divulgon pas ces info.</small>
-        </div>
-        
+        </fieldset>
         <div class="form-group">
           <label for="_sujet">Sujet:</label>
           <select class="form-control" name="sujet" id="_sujet" required>
