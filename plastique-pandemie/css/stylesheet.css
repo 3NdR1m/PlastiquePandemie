@@ -40,9 +40,9 @@ fieldset {
 /* region Footer */
 footer {
 	padding: 5px 0px 5px 0px;
-	bottom: 0px;
 	background-color: #222;
 	color: white;
+	max-height: 90px;
 }
 
 .border-round { 
