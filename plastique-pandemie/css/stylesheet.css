@@ -51,3 +51,11 @@ footer {
     padding: 20px; 
 	margin: 20px;
 }
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
