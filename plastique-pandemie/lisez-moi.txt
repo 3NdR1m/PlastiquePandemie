@@ -42,3 +42,27 @@ https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
 			</div>
 		</div>
 	</nav>
+
+----------- HEADER -------------
+<header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-1"></a>
+          <a class="navbar-brand" href="#">Plastique Pandemie</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="index.html">Acceuil</a>
+              <a class="nav-item nav-link" href="problematique.html">Le Problème</a>
+              <a class="nav-item nav-link" href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
+              <a class="nav-item nav-link" href="video-polution-ocean.html">Vidéos</a>
+              <a class="nav-item nav-link active" href="contact.html">Contact</a>
+              <a class="nav-item nav-link" href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+
+
