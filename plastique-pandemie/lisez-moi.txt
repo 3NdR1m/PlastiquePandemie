@@ -44,7 +44,7 @@ https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
 	</nav>
 
 ----------- HEADER -------------
-<header>
+	<header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-1"></a>
           <a class="navbar-brand" href="#">Plastique Pandemie</a>
