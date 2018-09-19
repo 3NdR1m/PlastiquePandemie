@@ -47,3 +47,8 @@ header {
 	border:none;
 	overflow:hidden;
 }
+
+.etude-icon {
+	height: 200px;
+	width: 200px;
+}
