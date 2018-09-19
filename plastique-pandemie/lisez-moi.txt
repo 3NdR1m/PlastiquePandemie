@@ -47,7 +47,7 @@ https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
 	 <link rel="icon" href="images/favicon.png">
 
 ----------- HEADER -------------
-<header>
+	<header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-1"></a>
           <a class="navbar-brand" href="#">Plastique Pandemie</a>
@@ -66,6 +66,16 @@ https://www.youtube.com/watch?v=qVoFeELi_vQ&vl=en
           </div>
         </nav>
     </header>
+	
+----------FOOTER----------
+	
+<footer>
+	<div class="row">
+		<div class="col-1"><img src = "images/favicon.png" class = "floatleft" alt="La santé"></div>
+		<div class="col-1"><iframe style="width:310px;height:220px;overflow:hidden;border:0;" src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com/LaVeriteSurLaSante/&amp;layout=button_count&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;"></iframe></div>
+		<div class="col"><small> Créer par:<br> Andrew Veillette <br> Benjamin Bergeron </small></div>
+	</div>
+</footer>
 
 
 
