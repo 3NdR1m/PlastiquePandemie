@@ -1,84 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Plastique Pandemie - Problématique</title>
     <meta name="description" content="En quoi la polution océanique est-elle un problème? - Plastique Pandemie - La vérité sur la Santé">
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Twitter Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  </head>
-    <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-1"></a>
-          <a class="navbar-brand" href="#">Plastique Pandemie</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-1"></a>
+            <a class="navbar-brand" href="index.html">Plastique Pandemie</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="index.html">Acceuil</a>
-              <a class="nav-item nav-link" href="problematique.html">Le Problème</a>
-              <a class="nav-item nav-link" href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
-              <a class="nav-item nav-link" href="video-polution-ocean.html">Vidéos</a>
-              <a class="nav-item nav-link active" href="contact.html">Contact</a>
-              <a class="nav-item nav-link" href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">Acceuil</a>
+                    <a class="nav-item nav-link" href="problematique.html">Le Problème</a>
+                    <a class="nav-item nav-link" href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a>
+                    <a class="nav-item nav-link" href="video-polution-ocean.html">Vidéos</a>
+                    <a class="nav-item nav-link active" href="contact.html">Contact</a>
+                    <a class="nav-item nav-link" href="carriere-et-benevolat.html">Carrière et bénévolat</a>
+                </div>
             </div>
-          </div>
         </nav>
     </header>
-    <div class="container-fluid">
-      <h2>Suivez-nous sur facebook!</h2>
-      <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      <h2>Ou Contactez-nous:</h2>
-      <form action="" method="post" id="form">
+    <!-- MAIN -->
+    <main role="main" class="container">
+        <h2>Suivez-nous sur facebook!</h2>
+        <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70"
+            style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <h2>Contactez-nous:</h2>
+        <form action="" method="post" id="form">
 
-        <fieldset>
-          <legend>informations</legend>
-          <label>Nom:</label>
-          <div class="form-row">
-            <div class="col-sm-2">
-              <input name="prenom" class="form-control" type="text" placeholder="Prénom" maxlength="60" required>
-            </div>
-            <div class="col-sm-2">
-              <input name="nom" class="form-control" type="text" placeholder="Nom" maxlength="60" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="_email">Addresse Email:</label>
-            <input type="email" name="email" class="form-control" id="_email" aria-describedby="emailHelp" placeholder="Entrée votre addresse électronique" required>
-            <small id="emailHelp" class="form-text text-muted">Nous ne divulgon pas ces info.</small>
-          </div>
-        </fieldset>
-        <div class="form-group">
-          <label for="_sujet">Sujet:</label>
-          <select class="form-control" name="sujet" id="_sujet" required>
+            <fieldset>
+                <legend>informations</legend>
+                <label>Nom:</label>
+                <div class="form-row">
+                    <div class="col-sm-2">
+                        <input name="prenom" class="form-control" type="text" placeholder="Prénom" maxlength="60" required>
+                    </div>
+                    <div class="col-sm-2">
+                        <input name="nom" class="form-control" type="text" placeholder="Nom" maxlength="60" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="_email">Addresse Email:</label>
+                    <input type="email" name="email" class="form-control" id="_email" aria-describedby="emailHelp" placeholder="Entrée votre addresse électronique" required>
+                    <small id="emailHelp" class="form-text text-muted">Ces informations resteront confidenciels.</small>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="_sujet">Sujet:</label>
+                <select class="form-control" name="sujet" id="_sujet" required>
             <option value="Webmestre">Webmestre</option>
             <option value="Évènements">Évènements</option>
             <option value="Conférences">Conférences</option>
           </select>
-        </div>
-        <div class="form-group">
-          <label for="_message">Message:</label>
-          <textarea class="form-control" id="_message" rows="5" name="message" required></textarea>
-        </div>
+            </div>
+            <div class="form-group">
+                <label for="_message">Message:</label>
+                <textarea class="form-control" id="_message" rows="5" name="message" required></textarea>
+            </div>
 
-        <input type="reset" value="Réinitialiser"> <input type="submit" value="Envoyer">
-      </form>
-    </div>
-    <footer>
-      <p> Créer par: Andrew Veillette & Benjamin Bergeron
-      <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="18" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      </p>
+            <input type="reset" value="Réinitialiser"> <input type="submit" value="Envoyer">
+        </form>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <span> Créer par: Andrew Veillette & Benjamin Bergeron
+          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="18" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </span>
+        </div>
     </footer>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125385531-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-125385531-1');
-  </script> 
-  </body>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125385531-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-125385531-1');
+    </script>
+</body>
+
 </html>
