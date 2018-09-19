@@ -13,9 +13,16 @@ body {
     background-size: cover;
 }
 
-footer {
-    position: fixed;
+main,
+header,
+.footer {
+    box-shadow: 1px 1px 7px #111;
+}
+
+.footer {
+    position: relative;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 
