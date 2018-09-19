@@ -6,16 +6,18 @@ html {
     height: 100%;
 }
 
-body,
-.container {
+body {
     min-height: 100%;
+    background-image: url('../images/oceanTrash.JPG');
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .footer {
     vertical-align: bottom;
 }
 
-h1 {
+.glow {
     text-shadow: 1px 1px 9px #777;
 }
 
