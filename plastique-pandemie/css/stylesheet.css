@@ -1,61 +1,52 @@
 #linear-gradient {
-	background: linear-gradient (white, grey);
+    background: linear-gradient (white, grey);
 }
 
-body, html {
-	min-height: 100%;
+body,
+html {
+    min-height: 100%;
 }
 
 body {
-	margin: 0px;
-	text-align: center;
+    margin: 0px;
+    text-align: center;
 }
 
 h1 {
-	width: 100%;
-	text-shadow: 1px 1px 9px #777;
+    width: 100%;
+    text-shadow: 1px 1px 9px #777;
 }
 
 header {
-	background-color: #3d3d3d; 
-	color: white;
-	text-align: center;
-	margin: 0px auto;
-	padding: 1px 0px 1px 0px;
-	min-width: 100%;
+    background-color: #3d3d3d;
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+    padding: 1px 0px 1px 0px;
+    min-width: 100%;
 }
 
 
-/* Region Form */
-form {
-	background-color: #3d3d3d;
-	border: 3px groove cadetblue;
-	color: white;
-	/*width: fit-content;*/
-}
-
-fieldset {
-	border: 2px groove cadetblue;
-}
 /* region Footer */
+
 footer {
-	padding: 5px 0px 5px 0px;
-	background-color: #343a40;
-	color: white;
-	max-height: 3%;
+    padding: 5px 0px 5px 0px;
+    background-color: #343a40;
+    color: white;
+    max-height: 3%;
 }
 
-.border-round { 
+.border-round {
     border-radius: 27px;
-	border: 2px solid #73AD21;
-    padding: 20px; 
-	margin: 20px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    margin: 20px;
 }
 
 .floatleft {
-	float: left;
+    float: left;
 }
 
 .floatright {
-	float: right;
+    float: right;
 }
