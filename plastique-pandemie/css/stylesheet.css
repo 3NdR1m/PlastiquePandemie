@@ -2,38 +2,21 @@
     background: linear-gradient (white, grey);
 }
 
-body,
 html {
+    height: 100%;
+}
+
+body,
+.container {
     min-height: 100%;
 }
 
-body {
-    margin: 0px;
-    text-align: center;
+.footer {
+    vertical-align: bottom;
 }
 
 h1 {
-    width: 100%;
     text-shadow: 1px 1px 9px #777;
-}
-
-header {
-    background-color: #3d3d3d;
-    color: white;
-    text-align: center;
-    margin: 0px auto;
-    padding: 1px 0px 1px 0px;
-    min-width: 100%;
-}
-
-
-/* region Footer */
-
-footer {
-    padding: 5px 0px 5px 0px;
-    background-color: #343a40;
-    color: white;
-    max-height: 3%;
 }
 
 .border-round {
