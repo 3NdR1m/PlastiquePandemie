@@ -9,12 +9,6 @@ body {
     background-size: cover;
 }
 
-main,
-header,
-.footer {
-    box-shadow: 1px 1px 7px #111;
-}
-
 header {
     background-image: linear-gradient(#454d54, #343a40);
 }
@@ -25,6 +19,7 @@ header {
     left: 0;
     width: 100%;
     background-image: linear-gradient(#343a40, #454d54);
+	box-shadow: 1px 1px 7px #111;
 }
 
 .glow {
@@ -33,10 +28,11 @@ header {
 
 .border-round {
     border-radius: 27px;
-    border: 2px solid #73AD21;
+    border: 2px solid #343a40;
     padding: 20px;
     margin: 20px;
     background-color: white;
+	box-shadow: 5px 5px 5px 5px #343a40;
 }
 
 .floatleft {
@@ -45,4 +41,9 @@ header {
 
 .floatright {
     float: right;
+}
+
+.facebook {
+	border:none;
+	overflow:hidden;
 }
