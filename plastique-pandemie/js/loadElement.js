@@ -1,3 +1,0 @@
-$("#navbar").append(
-    '<a href="index.html">Acceuil</a><a href="problematique.html">Le Problème</a><a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a><a href="video-polution-ocean.html">Vidéos</a><a href="contact.html">Contact</a><a href="carriere-et-benevolat.html">Carrière et bénévolat</a><script>$(`a[href$="${location.href.split("/").slice(-1)}"]`).addClass("active");</script>'
-    );
