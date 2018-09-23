@@ -1,55 +1,58 @@
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    background-image: url('../images/oceanTrash.JPG');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-header {
-    background-image: linear-gradient(#454d54, #343a40);
-}
-
-.footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image: linear-gradient(#343a40, #454d54);
-	box-shadow: 1px 1px 7px #111;
-}
-
-.glow {
-    text-shadow: 1px 1px 9px #777;
-}
-
-.border-round {
-    border-radius: 27px;
-    border: 2px solid #343a40;
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-	box-shadow: 5px 5px 5px 5px #343a40;
-}
-
-.floatleft {
-    float: left;
-}
-
-.floatright {
-    float: right;
-}
-
-.facebook {
-	border:none;
-	overflow:hidden;
-}
-
-.etude-icon {
-	height: 200px;
-	width: 200px;
-}
+    html {
+        /* Assure que la pages s'approprie tout la zone de render qui lui est réserver, c'est-à-dire tout la fenêtre.)*/
+        height: 100%;
+    }
+    
+    body {
+        /* Met l'image de fond */
+        background: url('../images/oceanTrash.JPG') no-repeat fixed center;
+        background-size: cover;
+    }
+    
+    .footer,
+    main,
+    header {
+        /* Ajoute de l'ombre au element principal */
+        box-shadow: 1px 1px 1px 1px #0005;
+    }
+    /* Ajour du Linear-gradient */
+    
+    header {
+        background-image: linear-gradient(#454d54, #343a40);
+    }
+    
+    .footer {
+        background-image: linear-gradient(#343a40, #454d54);
+    }
+    /* attribut pour text glow */
+    
+    .glow {
+        text-shadow: 1px 1px 9px #777;
+    }
+    /* other */
+    
+    .border-round {
+        border-radius: 27px;
+        border: 2px solid #343a40;
+        padding: 20px;
+        margin: 20px;
+        background-color: white;
+    }
+    
+    .floatleft {
+        float: left;
+    }
+    
+    .floatright {
+        float: right;
+    }
+    
+    .facebook {
+        border: none;
+        overflow: hidden;
+    }
+    
+    .etude-icon {
+        height: 200px;
+        width: 200px;
+    }

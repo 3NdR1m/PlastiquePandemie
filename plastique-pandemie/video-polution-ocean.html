@@ -17,6 +17,40 @@
 </head>
 
 <body>
+    <style>
+        /*https://www.webmaster-source.com/2012/04/24/pure-css-blockquote-styling/*/
+        
+        blockquote {
+            font-family: Georgia, serif;
+            font-size: 14px;
+            margin: 0.25em 0;
+            padding: 0.35em 40px;
+            position: relative;
+            color: white;
+        }
+        
+        blockquote:before {
+            display: block;
+            padding-left: 10px;
+            content: "\201C";
+            font-size: 80px;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: #7a7a7a;
+        }
+        
+        blockquote cite {
+            color: #999999;
+            font-size: 13px;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        blockquote cite:before {
+            content: "Mis en ligne par \2014 \2009";
+        }
+    </style>
     <!-- HEADER -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,25 +80,36 @@
         <ul class="list-group list-group-flush border-light">
             <li class="list-group-item bg-dark">
                 <h3>"Le 8eme continent"</h3>
-                <p>
-
-                </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/C1b82uX08wU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <blockquote>On l'appelle le "8ème continent" ou la "soupe de plastique". Situé dans le Nord-Est de l'océan Pacifique, et découvert en 1997, il s'étend sur une surface d'environ 3,4 millions de Km2 soit près de 6 fois la superficie de la France. Il
+                    est peuplé de déchets en tous genres produits par l'activité humaine et de microparticules de plastique. Une mission d'exploration menée par un Guyanais appareillera le 28 mai de San Diego (Etats-Unis) pour aller étudier de plus près
+                    cette plaque de débris. <cite>AFP</cite>
+                </blockquote>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C1b82uX08wU" allowfullscreen></iframe>
+                </div>
             </li>
             <li class="list-group-item bg-dark">
                 <h3>Tour des Océans</h3>
-                <p>
-                </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/F9vosz5sGug" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <blockquote>La production mondiale de plastique dépasse les 320 millions de tonnes par an. Et nous en jetons beaucoup, souvent pas à l'endroit approprié... Une bonne part de nos déchets de plastique finit dans les océans où ils forment de véritables
+                    "soupes". Dans le Pacifique, le plus grande de ces décharges grandit d'année en année : le fameux "8e continent" fait désormais trois fois la surface de la France. 80.000 tonnes de déchets venus des quatre coins de la planète s'y concentrent.
+                    <cite>L'Obs</cite>
+                </blockquote>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/F9vosz5sGug" allowfullscreen></iframe>
+                </div>
             </li>
             <li class="list-group-item bg-dark">
                 <h3>Plastique : la grande intox</h3>
-                <p>"C'est bien plus que de l'eau en bouteille"
-                </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wZT3drAYIzo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <blockquote>Dans le monde, dix tonnes de plastique sont produites chaque seconde. Un dixième finit dans les océans, laissant présager qu'en 2050, il y aura plus de plastique que de poissons dans la mer. Face à ces chiffres effarants, Elise Lucet et
+                    son équipe partent explorer ce « continent plastique » qui ne cesse de grandir. Les responsables ? Les grands marques qui s'acharnent à développer une addiction à cette matière. Pour éviter d'endosser la responsabilité de la pollution,
+                    certains industriels ont trouvé la parade : la mettre sur les épaules des consommateurs. Enquête sur les stratégies secrètes de l'un des géants mondiaux des sodas et les promesses de recyclage des emballages. <cite>Cash Investigation</cite>
+                </blockquote>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wZT3drAYIzo" allowfullscreen></iframe>
+                </div>
             </li>
         </ul>
-
+        <hr class="bg-white" />
     </main>
     <!-- FOOTER -->
     <footer class="footer bg-dark text-light py-3">
