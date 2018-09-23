@@ -9,7 +9,7 @@
         background-size: cover;
     }
     
-    .footer,
+    .page-footer,
     main,
     header {
         /* Ajoute de l'ombre au element principal */
@@ -21,13 +21,23 @@
         background-image: linear-gradient(#454d54, #343a40);
     }
     
-    .footer {
+    .page-footer {
         background-image: linear-gradient(#343a40, #454d54);
     }
     /* attribut pour text glow */
     
     .glow {
         text-shadow: 1px 1px 9px #777;
+    }
+    /* Ajout d'une transition au survol de nos nom, requies dans TP1-Prorgammation-Web.pdf */
+    
+    .name {
+        -webkit-transition: color 1s;
+        transition: color 1s;
+    }
+    
+    .name:hover {
+        color: aqua;
     }
     /* other */
     
