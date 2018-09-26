@@ -66,3 +66,7 @@
         height: 200px;
         width: 200px;
     }
+	
+	.minimumsize {
+		min-width: 700px;
+	}
