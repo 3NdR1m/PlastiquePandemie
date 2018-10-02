@@ -3,40 +3,40 @@ URL: plastiquepandemie.org
 Coût: 7.99$
 
 =================== TODO ===================
-Attribution droit d'auteur
-image alt
+Attribution droit d'auteur (étude)
+	- etude-et-articles.html
+	
+Attribution droit d'auteur (image) & image alt
+	- index.html
+	- etude-et-articles.html
+
 Validation syntaxe, ortograph etc
+
 Validation W3C
-Optimisatiser...
+Optimisation:
 	- Mémoire
 	- vitesse
 	- SEO
 
+################ HTML Format ################
+<!DOCTYPE html>
 
+<html lang="fr>
 
-=============== Page Terminers ==============
-# Achever - en attente de review #
+ <head>
+ 	[almost same on all page]
+ </head>
+ <body>
+	<header>
+		[structure same on all page]
+	</header>
+	<main>
+		[original content]
+	</main>
+	<footer>
+		[all same on all page]
+	</footer>
+	<style> //optional; only use in video.
+ </body>
 
-# Terminer #
-
-############## Propriété partager ###################
-<meta charset="utf-8">
-<meta name="keywords" content="environement,pollution,plastique,océans,eau,pop,Polluants Organiques Persistants,santé,la verité sur la santé,projet,étudiant,activisme,alimentation,plage">
-<meta name="author" content="Benjamin Bergeron, Andrew Veillette">
-<meta name="description" content=<!-- "insert description" -->>
-<link rel="icon" href="images/favicon.png">
-<link rel="stylesheet" href="css/stylesheet.css">
-
-<!-- OG tags pour Facebook -->
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Titre de la page – Nom recherche – La vérité sur la santé Québec" />
-<meta property="og:site_name" content="Plastique Pandemie- La vérité sur la santé Québec" />
-<meta property="og:url" content="OG_URL_HTTPS/plastiquepandemie.org/" />
-
-/* to edit... */
-<meta property="og:description" content="Description du site – voir meta description" />
-<meta property="og:image" content="OG_URL_HTTP_img/lien-vers-image-de-partagefb_1030x644.png" />
-<metaproperty="og:image:secure_url" content="OG_URL_HTTPS_img/lien-vers-image-departage-fb_1030x644.png" />
-<meta property="og:image:width" content="1030" /> <meta property="og:image:height" content="644" />
-<meta property="og:image:alt" content="description de l’image" />
+</html>
