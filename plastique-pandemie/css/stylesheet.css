@@ -23,15 +23,10 @@ body {
 /* Autre */
 hr { background-color: white; }
 
+/* Couleur de fonds */
 body > *{
     background-image: linear-gradient(#38495a, #272b30);
     color: white;
 }
 
-body > footer{
-    background-image: linear-gradient(#272b30, #38495a);
-}
-
-.carousel-item {
-    height: 450px !important;
-}
+body > footer{ background-image: linear-gradient(#272b30, #38495a); }
