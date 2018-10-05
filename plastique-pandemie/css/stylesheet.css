@@ -31,3 +31,7 @@ body > *{
 body > footer{
     background-image: linear-gradient(#272b30, #38495a);
 }
+
+.carousel-item {
+    height: 450px !important;
+}
