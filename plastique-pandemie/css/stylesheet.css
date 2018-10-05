@@ -1,11 +1,29 @@
 /* Met l'image de fond */
 body {
-    background: url('../images/oceanTrash.JPG') no-repeat fixed center;
+    background: url('../images/background.jpg') no-repeat fixed center;
     background-size: cover;
 }
 
-/* Ajout d'une transition au survol de nos nom, requies dans TP1-Prorgammation-Web.pdf */
+/* Ajout d'une transition au survol de nos nom dans footer */
 .name { transition: color 1s; }
 .name:hover { color: aqua; }
 
+/* Ajout d'une transition au survol des nav link */
+.nav-item:not(.active) { transition: all 0.2s; }
+.nav-item:not(.active):hover { transform: translateY(-2px); }
+
+/* Ajout animation Navbar brand */
+.navbar-brand {
+    height: 40px;
+    overflow: hidden;
+}
+.navbar-brand > p { transition: all 0.5s; transform: translateY(-3em);}
+.navbar-brand > p:hover { transform: translateY(0em); }
+
+/* Autre */
 hr { background-color: white; }
+
+body > *{
+    background-color: #343a40;
+    color: white;
+}

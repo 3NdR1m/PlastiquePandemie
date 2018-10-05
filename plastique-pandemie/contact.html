@@ -42,10 +42,10 @@
 
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="../index.html"><img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" class="mr-2"></a>
-        <a class="navbar-brand" href="index.html">
-            <p class="h5 pt-2">Plastique Pandemie</p>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="../index.html">
+            <img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" height="30" class="d-inline-block align-top">
+            <p class="d-inline-block">La vérité sur la santé<br><br>Plastique Pandemie</p>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -62,8 +62,8 @@
         </div>
     </nav>
     <!-- MAIN -->
-    <main class="container bg-dark p-4 my-5 text-white">
-        <h1>Contactez-nous!</h1>
+    <main class="container p-4 my-5">
+        <h1 class="text-center">Contactez-nous!</h1>
         <hr>
         <h2>Suivez-nous sur Facebook!</h2>
         <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
@@ -72,9 +72,8 @@
         <hr>
         <h2>Contactez-nous:</h2>
         <form action="*" method="post" id="form">
-
             <fieldset>
-                <legend>informations</legend>
+                <legend>Informations Personelles</legend>
                 <label>Nom:</label>
                 <div class="form-row">
                     <div class="col-sm-2">
@@ -85,51 +84,51 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="_email">Addresse Email:</label>
+                    <label for="_email">Addresse Courielle:</label>
                     <input type="email" name="email" class="form-control" id="_email" aria-describedby="emailHelp" placeholder="Entrée votre addresse électronique" required>
                     <small id="emailHelp" class="form-text text-muted">Ces informations resteront confidenciels.</small>
                 </div>
             </fieldset>
-            <div class="form-group">
-                <label for="_sujet">Sujet:</label>
-                <select class="form-control" name="sujet" id="_sujet" required>
-                    <option value="">Webmestre</option>
-                    <option value="">Évènements</option>
-                    <option value="">Conférences</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="_message">Message:</label>
-                <textarea class="form-control" id="_message" rows="5" name="message" required></textarea>
-            </div>
+            <fieldset>
+                <legend>Message</legend>
+                <div class="form-group">
+                    <select class="form-control" name="sujet" id="_sujet" required>
+                        <option value="" disabled selected>Selectioner le sujet.</option>
+                        <option value="">Webmestre</option>
+                        <option value="">Évènements</option>
+                        <option value="">Conférences</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="_message" rows="5" name="message" placeholder="Écrivez votre message ici." required></textarea>
+                </div>
+            </fieldset>
             <input class="btn-small btn-primary" type="submit" value="Envoyer">
             <input class="btn-small btn-danger" type="reset" value="Réinitialiser">
         </form>
     </main>
     <!-- FOOTER -->
-    <footer class="font-small bg-dark text-light py-2">
-        <div class="container-fluid text-center">
-            <div class="row">
-                <div class="col">
-                    <p>Fait par:</p>
-                    <p class="name small">Benjamin Bergeron & Andrew Veillette, Octobre 2018</p>
-                </div>
-                <div class="col">
-                    <p>Navigation:</p>
-                    <ul class="list-unstyled small list-inline">
-                        <li class="list-inline-item"><a href="index.html">Acceuil</a></li>
-                        <li class="list-inline-item"><a href="problematique.html">Le Problème</a></li>
-                        <li class="list-inline-item"><a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a></li>
-                        <li class="list-inline-item"><a href="video-polution-ocean.html">Vidéos</a></li>
-                        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                        <li class="list-inline-item"><a href="carriere-et-benevolat.html">Carrière et bénévolat</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <p>Notre Facebook:</p>
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70"
-                        style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
-                </div>
+    <footer class="container-fluid font-small py-2 text-center">
+        <div class="row">
+            <div class="col">
+                <p>Fait par:</p>
+                <p class="name small">Benjamin Bergeron & Andrew Veillette, Octobre 2018</p>
+            </div>
+            <div class="col">
+                <p>Navigation:</p>
+                <ul class="list-unstyled small list-inline">
+                    <li class="list-inline-item"><a href="index.html">Acceuil</a></li>
+                    <li class="list-inline-item"><a href="problematique.html">Le Problème</a></li>
+                    <li class="list-inline-item"><a href="etudes-et-articles-scientifiques-polution-ocean.html">Études et Articles</a></li>
+                    <li class="list-inline-item"><a href="video-polution-ocean.html">Vidéos</a></li>
+                    <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+                    <li class="list-inline-item"><a href="carriere-et-benevolat.html">Carrière et bénévolat</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Notre Facebook:</p>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70"
+                    style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
             </div>
         </div>
     </footer>
