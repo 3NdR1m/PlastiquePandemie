@@ -15,8 +15,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- Google Analytics -->
-    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-NO_UNIQUE_GA', 'auto');ga('send', 'pageview');</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125385531-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-125385531-1');
+    </script>
     <!-- OG tags pour Facebook -->
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="article" />
@@ -56,10 +62,11 @@
     <main class="container p-4 my-5">
         <h1 class="text-center">Contactez-nous!</h1>
         <hr>
-        <h2>Suivez-nous sur Facebook!</h2>
-        <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70"
-            style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
+        <div class="text-center">
+            <h2>Suivez-nous sur Facebook!</h2>
+            <p>Pour recevoir les dernières informations reliées à la santé et pour bâtire une communauté santé.</p>
+            <iframe style="width:310px;height:220px;overflow:hidden;border:0;" src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com/LaVeriteSurLaSante/&amp;layout=button_count&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;" ></iframe>
+        </div>
         <hr>
         <h2>Contactez-nous:</h2>
         <form action="*" method="post" id="form">
