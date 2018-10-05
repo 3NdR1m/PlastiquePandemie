@@ -24,6 +24,10 @@ body {
 hr { background-color: white; }
 
 body > *{
-    background-color: #343a40;
+    background-image: linear-gradient(#38495a, #272b30);
     color: white;
+}
+
+body > footer{
+    background-image: linear-gradient(#272b30, #38495a);
 }
