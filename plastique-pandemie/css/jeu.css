@@ -1,0 +1,50 @@
+
+body{
+	background-image: url('../img/legumes-bkg-alpha30.jpg');
+	background-position: center; 
+	background-size: 100% auto;
+}
+
+#barreProgression{
+	background-color: green;
+	height:5px;
+}
+
+#texteQuestion{
+	font-size: 2em;
+	padding:1em;
+}
+
+#boiteChoix
+{
+	padding:0.5em;
+}
+
+.btnChoix{
+	font-size: 2em;
+	border-color: green;
+    border-width: 1px;
+    border-style: solid;
+    padding:10px;
+}
+
+.btnChoix:hover{
+	border-color: green;
+    background-color:#c8f1bf;
+    cursor:-webkit-grab;
+}
+
+
+#auteur{
+	padding-top:2em;
+	margin:auto;
+	text-align: center;
+	font-size: 1.5em !important;
+}
+
+
+
+.text-shadow{
+	text-shadow: 3px 3px 8px rgba(150, 150, 150, 0.79);
+}
+

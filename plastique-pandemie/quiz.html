@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Jeu Questionnaire - La Vérité sur la Santé</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CMontserrat" rel="stylesheet">
+
+		<!-- Styles du développeur -->
+		<link rel="stylesheet" type="text/css" href="css/jeu.css">
+
+		<!-- https://github.com/daneden/animate.css -->
+		<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+		<!-- Bibliothèque du développeur -->
+		<script src="js/quiz.js"></script>
+		<script src="js/audio.js"></script>
+		<script src="js/init.js"></script>
+
+	</head>
+	<body>
+		<div class="container-fluid" style="opacity: 1.0;">
+			<div class="row text-center">
+				<div class="col-12">
+					<a class="navbar-brand btn " style="font-family: 'Kaushan Script', cursive;font-size: 2em;" href="../">
+						<img src="https://www.laveritesurlasante.com/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" />
+						<span class="text-shadow" style="color:#5a5a5a">La Vérité sur la Santé</span>
+					</a>
+				</div>
+				<div class="col-12">
+					<a class="navbar-brand btn " style="font-family: 'Kaushan Script', cursive;font-size: 2em;" href="../">
+						<span class="text-shadow" style="color:#5a5a5a">Nom du site</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="row text-center">
+				<div class="col-12">
+					<h1 style="font-family: 'Kaushan Script', cursive; color:green; margin-top:1em">Jeu questionnaire</h1>
+				</div>
+			</div>
+
+			<div class="row" style="padding:1em;">
+				<div class="col-6">
+					<h3>Question # <span id="noQuestionCourante">1</span></h3>
+				</div>
+				<div class="col-6 text-right">
+					<h3>Pointage: <span id="totalPoints">0</span>/<span id="totalQuestions"></span></h3>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-12">
+					<div id="barreProgression"></div>
+				</div>
+			</div>
+
+			<div id="boiteQuestion" class="shadow-lg" style="background-color:#f7f7f7; padding:1em;">
+
+					<div class="question text-center">
+							<div class="question-inner">
+								
+								<p id="texteQuestion" class="animated wobble delay-2s">
+									Bienvenue au jeu questionnaire La Vérité sur la Santé!
+									<br>Préparez-vous à débuter!
+								</p>
+
+							<div class="container">
+										<div class="row" id="boiteChoix">
+											<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix1">
+												<div id="txtChoix0"></div>
+										</div>
+										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix2">
+												<div id="txtChoix1"></div>
+										</div>
+										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix3">
+												<div id="txtChoix2"></div>
+										</div>
+										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix4">
+												<div id="txtChoix3"></div>
+										</div>
+									</div>
+							</div>
+								<div class="row">
+								<div class="col-12 text-center">
+											<button style="padding:1em; margin:0.5em; display:none" 
+													class="btn btn-primary btn-block btn-lg" 
+													id="btnSubmitQuestion" 
+													disabled='true'>
+											Valider
+										</button>
+									</div>
+								</div>
+
+							</div>
+					</div>
+			</div>
+
+			<div id="resumeQuestion" class="text-center" style="background-color:#f7f7f7; padding:1em;display:none">
+				<h2>Fin de la partie</h2>
+				<button id="btnNouvellePartie" class="btn btn-block btn-lg">Recommencer</button>
+			</div>
+
+			<div id="modalReponse" class="modal" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Mauvaise réponse</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>La bonne réponse est la suivante : </p>
+							<p id="texteReponse" style="padding-left:0.2em;"></p>
+							<p>Pour plus d'informations : <a id="lienPlusInfos" href="#" target="_blank">#</a></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fermer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="auteur" class="text-muted">
+				<p>Nom site - 2018</p>
+				<p>Noms</p>
+			</div>
+
+		</div>
+
+		<script>
+			//Ajouter votre code ici
+
+		</script>
+
+		<!-- Audio CC0 - https://www.zapsplat.com/ -->
+		<audio id="successAudio">
+			<source src="audio/succes.mp3" type="audio/mpeg" />
+			Votre navigateur ne supporte pas les éléments audio.
+		</audio>
+		<audio id="errorAudio">
+			<source src="audio/echec.mp3" type="audio/mpeg" />
+			Votre navigateur ne supporte pas les éléments audio.
+		</audio>
+		<audio id="introAudio">
+			<source src="audio/intro.mp3" type="audio/mpeg" />
+			Votre navigateur ne supporte pas les éléments audio.
+		</audio>
+
+	</body>
+</html>
