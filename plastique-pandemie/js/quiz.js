@@ -1,7 +1,11 @@
 /**
  * @module quiz.js
  * @author Benjamin Bergeron
+<<<<<<< HEAD
  * @author Andrew Veilleux
+=======
+ * @author Andrew Veillette
+>>>>>>> ddb4a160088ac859368ae027bf582ba660e0dcb3
  * @copyright 2018
  */
 
@@ -106,8 +110,7 @@ function obtenirChoix(noQuestion)
  * @description Modifie la fenêtre modale pour afficher la bonne réponse pour une question donnée.
  * @param {*} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
-function afficherBonneReponse(noQuestion)
-{
+function afficherBonneReponse(noQuestion) {
 	//ajouter votre code ici
 }
 
@@ -169,8 +172,7 @@ function majNoQuestionCourant()
  * @name remiseAZeroBoutons
  * @description Modifie l'interface en remettant à l'état initial les boutons de réponse.
  */
-function remiseAZeroBoutons()
-{
+function remiseAZeroBoutons() {
 	//ajouter votre code ici
 }
 
