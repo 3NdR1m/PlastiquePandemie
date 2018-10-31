@@ -3,6 +3,14 @@
  * 
  */
 //validerQuestion
+QUnit.test( "WHEN_questionIsWrong_THEN_validerQuestion_RETURNS_false", 
+    function( assert ) {
+        const noQuestion = 1;
+        const choixUtilisateur = 1;
+        const expectedresult = false;
+        assert.ok( validerQuestion(noQuestion, choixUtilisateur) == expectedResult)
+
+});
 
 //ajouterPoint
 QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
@@ -26,7 +34,6 @@ QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1",
         ajouterPoint()
         assert.ok( expectedScore == totalPointage )
 });
-
 
 //obtenirPoint
 QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
