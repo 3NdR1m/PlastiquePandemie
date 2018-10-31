@@ -1,11 +1,7 @@
 /**
  * @module quiz.js
  * @author Benjamin Bergeron
-<<<<<<< HEAD
  * @author Andrew Veilleux
-=======
- * @author Andrew Veillette
->>>>>>> ddb4a160088ac859368ae027bf582ba660e0dcb3
  * @copyright 2018
  */
 
@@ -95,11 +91,9 @@ function obtenirBonneReponse(noQuestion)
  */
 function obtenirChoix(noQuestion)
 {
-	var nbChoix = questionsQuiz[noQuestion].length;
 	var choix;
-
-	for (let i = 2; i < nbChoix; i++) {
-		choix[i] = noQuestion[noQuestion][i];
+	for (let i = 0; i < NB_CHOIX_MAX; i++) {
+		choix[i] = questionsQuiz[noQuestion][i + 2];
 	}
 
 	return choix;
@@ -111,7 +105,9 @@ function obtenirChoix(noQuestion)
  * @param {*} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
 function afficherBonneReponse(noQuestion) {
-	//ajouter votre code ici
+	document.getElementById("modalReponse").style.display = "block";
+	document.getElementById("texteReponse").textContent = obtenirBonneReponse(noQuestion)
+	document.getElementById("lienPlusInfos").href = "";
 }
 
 /**
@@ -192,7 +188,12 @@ function majProgression()
  */
 function majInterface()
 {
-	majNoQuestionCourant();
+	var n = questionCourante;
+	majTexteChoix(n);
+	majTexteQuestion(n);
+	majPointage();
+	majProgression();
+	majPointage();
 }
 
 /**
@@ -202,9 +203,9 @@ function majInterface()
  */
 function selectionnerChoix(noChoix)
 {
-	$("#btnChoix"+noChoix)
-	$("#btnSubmitQuestion").disabled="false";
-	//ajouter votre code ici
+	document.getElementById("txtChoix"+noChoix).style.backgroundColor = "lightBlue"; // LINE TO REVIEW
+	document.getElementById("btnSubmitQuestion").disabled = false;
+	document.getElementById("btnSubmitQuestion").style.display = "block";
 }
 
 /**
