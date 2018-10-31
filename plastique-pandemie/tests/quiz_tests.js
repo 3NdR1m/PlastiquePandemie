@@ -27,6 +27,7 @@ QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1",
         assert.ok( ajouterPoint(score) == expectedScore );
 });
 
+
 //obtenirPoint
 QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
     function( assert ) {
@@ -39,6 +40,7 @@ QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true",
         questionCourante = 3;
         assert.ok( estFinPartie(questionCourante));
 });
+
 
 //chargerQuestionSuivante
 //obtenirBonneReponse

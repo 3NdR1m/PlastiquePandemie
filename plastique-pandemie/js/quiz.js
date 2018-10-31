@@ -1,7 +1,7 @@
 /**
  * @module quiz.js
- * @author Coéquipier1
- * @author Coéquipier2
+ * @author Benjamin Bergeron
+ * @author Andrew Veillette
  * @copyright 2018
  */
 
@@ -12,8 +12,7 @@
  * @param {*} choixUtilisateur choix fait par l'utilisateur
  * @returns true si la réponse choisie est bonne, sinon false
  */
-function validerQuestion(noQuestion, choixUtilisateur)
-{
+function validerQuestion(noQuestion, choixUtilisateur) {
 	//ajouter votre code ici
 }
 
@@ -21,9 +20,8 @@ function validerQuestion(noQuestion, choixUtilisateur)
  * @name ajouterPoint
  * @description Ajoute un point au total des points.
  */
-function ajouterPoint()
-{
-	//ajouter votre code ici
+function ajouterPoint() {
+	totalPointage++;
 }
 
 /**
@@ -31,8 +29,7 @@ function ajouterPoint()
  * @description Obtiens le pointage total accumulé.
  * @returns Le pointage total
  */
-function obtenirPointage()
-{
+function obtenirPointage() {
 	//ajouter votre code ici
 }
 
@@ -42,8 +39,7 @@ function obtenirPointage()
  * @param {*} questionCourante Index de la question courante
  * @returns true si l'index de la question courrante est égal au nombre maximum de questions, sinon faux
  */
-function estFinPartie(questionCourante)
-{
+function estFinPartie(questionCourante) {
 	//ajouter votre code ici
 }
 
@@ -51,8 +47,7 @@ function estFinPartie(questionCourante)
  * @name chargerQuestionSuivante
  * @description Incrémente l'index indiquant la question courante.
  */
-function chargerQuestionSuivante()
-{
+function chargerQuestionSuivante() {
 	//ajouter votre code ici
 }
 
@@ -62,8 +57,7 @@ function chargerQuestionSuivante()
  * @param {*} noQuestion L'index de la question
  * @returns retourne la bonne réponse
  */
-function obtenirBonneReponse(noQuestion)
-{
+function obtenirBonneReponse(noQuestion) {
 	//ajouter votre code ici
 }
 
@@ -73,8 +67,7 @@ function obtenirBonneReponse(noQuestion)
  * @param {*} noQuestion Index de la question pour laquelle il faut obtenir les choix de réponse.
  * @returns retourne un tableau contenant les choix de la question
  */
-function obtenirChoix(noQuestion)
-{
+function obtenirChoix(noQuestion) {
 	//ajouter votre code ici
 }
 
@@ -83,8 +76,7 @@ function obtenirChoix(noQuestion)
  * @description Modifie la fenêtre modale pour afficher la bonne réponse pour une question donnée.
  * @param {*} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
-function afficherBonneReponse(noQuestion)
-{
+function afficherBonneReponse(noQuestion) {
 	//ajouter votre code ici
 }
 
@@ -92,8 +84,7 @@ function afficherBonneReponse(noQuestion)
  * @name majPointage
  * @description Mets à jour le total des points accumulés dans l'interface.
  */
-function majPointage()
-{
+function majPointage() {
 	//ajouter votre code ici
 }
 
@@ -101,8 +92,7 @@ function majPointage()
  * @name majTotalQuestion
  * @description Mets à jour le nombre total de questions dans l'interface.
  */
-function majTotalQuestion()
-{
+function majTotalQuestion() {
 	//ajouter votre code ici
 }
 
@@ -111,8 +101,7 @@ function majTotalQuestion()
  * @description Modifie l'interface en affichant les réponses dans des boutons pour une question donnée.
  * @param {*} noQuestion Index de la question pour laquelle il faut afficher les réponses.
  */
-function majTexteChoix(noQuestion)
-{
+function majTexteChoix(noQuestion) {
 	//ajouter votre code ici
 }
 
@@ -121,8 +110,7 @@ function majTexteChoix(noQuestion)
  * @description Modifie l'interface en affichant une question.
  * @param {*} noQuestion Index de la question qu'il faut afficher.
  */
-function majTexteQuestion(noQuestion)
-{
+function majTexteQuestion(noQuestion) {
 	//ajouter votre code ici
 
 	$('#texteQuestion').removeClass('animated bounceInLeft delay-1s');
@@ -134,8 +122,7 @@ function majTexteQuestion(noQuestion)
  * @name majNoQuestionCourant
  * @description Modifie l'interface en affichant une le numéro de la question courante.
  */
-function majNoQuestionCourant()
-{	
+function majNoQuestionCourant() {	
 	//ajouter votre code ici
 }
 
@@ -143,8 +130,7 @@ function majNoQuestionCourant()
  * @name remiseAZeroBoutons
  * @description Modifie l'interface en remettant à l'état initial les boutons de réponse.
  */
-function remiseAZeroBoutons()
-{
+function remiseAZeroBoutons() {
 	//ajouter votre code ici
 }
 
@@ -152,8 +138,7 @@ function remiseAZeroBoutons()
  * @name majProgression
  * @description Modifie l'interface en ajustant la barre de progression.
  */
-function majProgression()
-{
+function majProgression() {
 	//ajouter votre code ici
 }
 
@@ -161,8 +146,7 @@ function majProgression()
  * @name majInterface
  * @description Modifie l'interface en changeant la question, les choix de réponses, en mettant à jour le pointage, la barre de progression et le numéro de la question courante et en remettant à zéro les boutons.
  */
-function majInterface()
-{
+function majInterface() {
 	//ajouter votre code ici
 }
 
@@ -171,8 +155,7 @@ function majInterface()
  * @description Modifie l'interface pour changer l'apparence du bouton cliqué et activer le bouton Valider.
  * @param {*} noChoix Numéro du choix de réponse sélectionné.
  */
-function selectionnerChoix(noChoix)
-{
+function selectionnerChoix(noChoix) {
 	//ajouter votre code ici
 }
 
@@ -180,7 +163,6 @@ function selectionnerChoix(noChoix)
  * @name afficherBoiteFinDeJeu
  * @description Modifie l'interface pour afficher la boîte de résumé et cacher la boîte de question.
  */
-function afficherBoiteFinDeJeu()
-{
+function afficherBoiteFinDeJeu() {
 	//ajouter votre code ici
 }
