@@ -201,6 +201,7 @@ function majInterface()
 function selectionnerChoix(noChoix)
 {
 	$("#btnChoix"+noChoix)
+	$("#btnSubmitQuestion").disabled="false";
 	//ajouter votre code ici
 }
 
