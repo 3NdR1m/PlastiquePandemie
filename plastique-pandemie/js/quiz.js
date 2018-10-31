@@ -1,7 +1,7 @@
 /**
  * @module quiz.js
- * @author Coéquipier1
- * @author Coéquipier2
+ * @author Benjamin Bergeron
+ * @author Andrew Veilleux
  * @copyright 2018
  */
 
@@ -14,7 +14,15 @@
  */
 function validerQuestion(noQuestion, choixUtilisateur)
 {
-	//ajouter votre code ici
+	const INDEX_BONNE_REPONSE = 1;
+	if(choixUtilisateur == questionsQuiz[noQuestion][INDEX_BONNE_REPONSE])
+	{
+		return true;
+	}
+	else
+	{
+		return false
+	}
 }
 
 /**
@@ -23,7 +31,7 @@ function validerQuestion(noQuestion, choixUtilisateur)
  */
 function ajouterPoint()
 {
-	//ajouter votre code ici
+	totalPointage ++;
 }
 
 /**
@@ -33,7 +41,7 @@ function ajouterPoint()
  */
 function obtenirPointage()
 {
-	//ajouter votre code ici
+	return totalPointage;
 }
 
 /**
@@ -44,7 +52,14 @@ function obtenirPointage()
  */
 function estFinPartie(questionCourante)
 {
-	//ajouter votre code ici
+	if(questionCourante == MAX_QUESTIONS)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 /**
@@ -53,7 +68,7 @@ function estFinPartie(questionCourante)
  */
 function chargerQuestionSuivante()
 {
-	//ajouter votre code ici
+	questionCourante ++;
 }
 
 /**
@@ -64,7 +79,8 @@ function chargerQuestionSuivante()
  */
 function obtenirBonneReponse(noQuestion)
 {
-	//ajouter votre code ici
+	chargerQuestionSuivante();
+	return questionsQuiz[noQuestion][1];
 }
 
 /**
@@ -75,7 +91,14 @@ function obtenirBonneReponse(noQuestion)
  */
 function obtenirChoix(noQuestion)
 {
-	//ajouter votre code ici
+	var nbChoix = questionsQuiz[noQuestion].length;
+	var choix;
+
+	for (let i = 2; i < nbChoix; i++) {
+		choix[i] = noQuestion[noQuestion][i];
+	}
+
+	return choix;
 }
 
 /**
@@ -94,7 +117,7 @@ function afficherBonneReponse(noQuestion)
  */
 function majPointage()
 {
-	//ajouter votre code ici
+	document.getElementById("totalPoints").textContent = totalPointage;
 }
 
 /**
@@ -103,7 +126,7 @@ function majPointage()
  */
 function majTotalQuestion()
 {
-	//ajouter votre code ici
+	document.getElementById("totalQuestions").textContent = MAX_QUESTIONS;
 }
 
 /**
@@ -113,7 +136,10 @@ function majTotalQuestion()
  */
 function majTexteChoix(noQuestion)
 {
-	//ajouter votre code ici
+	var choix = obtenirChoix(noQuestion);
+	for (let i = 0; i < choix.length; i++) {
+		document.getElementById("txtChoix"+i).innerText = choix[i];
+	}
 }
 
 /**
@@ -123,7 +149,7 @@ function majTexteChoix(noQuestion)
  */
 function majTexteQuestion(noQuestion)
 {
-	//ajouter votre code ici
+	$("#texteQuestion").innerText = questionsQuiz[noQuestion][0];
 
 	$('#texteQuestion').removeClass('animated bounceInLeft delay-1s');
 	$('#texteQuestion').removeClass('animated wobble delay-2s');
@@ -136,7 +162,7 @@ function majTexteQuestion(noQuestion)
  */
 function majNoQuestionCourant()
 {	
-	//ajouter votre code ici
+	document.getElementById("noQuestionCourante").textContent = questionCourante;
 }
 
 /**
@@ -154,6 +180,7 @@ function remiseAZeroBoutons()
  */
 function majProgression()
 {
+	document.getElementById("barreProgression")
 	//ajouter votre code ici
 }
 
@@ -163,7 +190,7 @@ function majProgression()
  */
 function majInterface()
 {
-	//ajouter votre code ici
+	majNoQuestionCourant();
 }
 
 /**
@@ -173,6 +200,7 @@ function majInterface()
  */
 function selectionnerChoix(noChoix)
 {
+	$("#btnChoix"+noChoix)
 	//ajouter votre code ici
 }
 
@@ -182,5 +210,6 @@ function selectionnerChoix(noChoix)
  */
 function afficherBoiteFinDeJeu()
 {
-	//ajouter votre code ici
+	document.getElementById("boiteQuestion").style.display = "none";
+	document.getElementById("resumeQuestion").style.display = "block";
 }

@@ -1,7 +1,7 @@
 /**
  * @module init.js
- * @author Coéquipier1
- * @author Coéquipier2
+ * @author Benjamin Bergeron
+ * @author Andrew Veilleux
  * @copyright 2018
  */
 
@@ -57,7 +57,13 @@ var reponseUtilisateur = 0;
   * @description Liste des questions disponibles pour le quiz.
   * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
   */
-var tableauQuestions = [[]];
+var tableauQuestions = [
+  ["QUESTION_1", 1, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
+  ["QUESTION_2", 1, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
+  ["QUESTION_3", 1, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
+  ["QUESTION_4", 1, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
+  ["QUESTION_5", 1, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"]
+];
 
 /**
   * @global
@@ -74,7 +80,13 @@ var questionsQuiz = [[]];
  */
 function choisirQuestions()
 {
-
+  var count = 0;
+  while(count < MAX_QUESTIONS)
+  {
+    //Math.floor((Math.random() * tableauQuestions.length) + 0);
+    questionsQuiz[count] = tableauQuestions[count]
+    count ++;
+  }
 }
 
 /**
@@ -83,7 +95,7 @@ function choisirQuestions()
  */
 function init() 
 {
-	
+  choisirQuestions();
 }
 
 window.onload = init;
