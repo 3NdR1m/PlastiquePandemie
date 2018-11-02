@@ -6,10 +6,9 @@
 QUnit.test( "WHEN_questionIsWrong_THEN_validerQuestion_RETURNS_false", 
     function( assert ) {
         const noQuestion = 1;
-        const choixUtilisateur = 1;
-        const expectedresult = false;
+        const choixUtilisateur = 2;
+        var expectedResult = false;
         assert.ok( validerQuestion(noQuestion, choixUtilisateur) == expectedResult)
-
 });
 
 //ajouterPoint
@@ -38,8 +37,8 @@ QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1",
 //obtenirPoint
 QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
     function( assert ) {
-        var totalpointage = 0;
-        assert.ok( obtenirPointage() == totalpointage );
+        var expectedPointage = 0;
+        assert.ok( obtenirPointage() == expectedPointage );
 });
 
 //estFinPartie
@@ -64,8 +63,3 @@ QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true",
 //majInterface
 //selectionnerChoix
 //afficherBoiteFinDeJeu
-
-QUnit.test( "", 
-    function( assert ) {
-        assert.ok();
-});
