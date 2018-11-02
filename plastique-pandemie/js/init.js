@@ -58,11 +58,11 @@ var reponseUtilisateur = 0;
   * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
   */
 var tableauQuestions = [
-  ["QUESTION_1", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
-  ["QUESTION_2", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
-  ["QUESTION_3", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
-  ["QUESTION_4", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"],
-  ["QUESTION_5", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3"]
+  ["QUESTION_1", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
+  ["QUESTION_2", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
+  ["QUESTION_3", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
+  ["QUESTION_4", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
+  ["QUESTION_5", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"]
 ];
 
 /**
@@ -97,12 +97,6 @@ function init()
 {
   questionCourante = 0;
   choisirQuestions();
-
-  for(let i = 0; i < MAX_QUESTIONS; i++)
-  {
-    
-  }
-  //afficherBoiteFinDeJeu();
 }
 
 window.onload = init;

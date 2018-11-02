@@ -138,7 +138,17 @@
 
 		<script>
 			//Ajouter votre code ici
+			for(let i = 0; i < NB_CHOIX_MAX; i++)
+			{
+				document.getElementById("btnChoix"+(i + 1)).addEventListener("click", function() {
+					selectionnerChoix(i);
+				}, false);
+			}
 
+			document.getElementById("btnSubmitQuestion").addEventListener("click", function() {
+				selectionnerChoix(i);
+			}, false);
+			
 		</script>
 
 		<!-- Audio CC0 - https://www.zapsplat.com/ -->

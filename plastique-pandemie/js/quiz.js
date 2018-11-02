@@ -1,7 +1,7 @@
 /**
  * @module quiz.js
  * @author Benjamin Bergeron
- * @author Andrew Veilleux
+ * @author Andrew Veillette
  * @copyright 2018
  */
 
@@ -91,9 +91,9 @@ function obtenirBonneReponse(noQuestion)
  */
 function obtenirChoix(noQuestion)
 {
-	var choix;
+	var choix = [];
 	for (let i = 0; i < NB_CHOIX_MAX; i++) {
-		choix[i] = questionsQuiz[noQuestion][i + 2];
+		choix[i] = questionsQuiz[noQuestion][i + 3];
 	}
 
 	return choix;
@@ -170,6 +170,10 @@ function majNoQuestionCourant()
  */
 function remiseAZeroBoutons() {
 	//ajouter votre code ici
+	var btns = document.getElementsByClassName("btnChoix");
+	for (let i = 0; i < btns.length; i++) {
+		btns[i];
+	}
 }
 
 /**
