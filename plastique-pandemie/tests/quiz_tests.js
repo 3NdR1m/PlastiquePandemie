@@ -1,37 +1,44 @@
+/** 
+ * 
+ * 
+ */
 //validerQuestion
-QUnit.test( "", 
+QUnit.test( "WHEN_questionIsWrong_THEN_validerQuestion_RETURNS_false", 
     function( assert ) {
-        assert.ok();
+        const noQuestion = 1;
+        const choixUtilisateur = 2;
+        var expectedResult = false;
+        assert.ok( validerQuestion(noQuestion, choixUtilisateur) == expectedResult)
 });
 
 //ajouterPoint
 QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
     function( assert ) {
-        const score = 2;
-        const expectedScore = 3;
-
-        assert.ok( ajouterPoint(score) == expectedScore );
+        totalPointage = 2;
+        var expectedScore = totalPointage + 1;
+        ajouterPoint()
+        assert.ok( expectedScore == totalPointage )
 });
 QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
     function( assert ) {
-        const score = 4;
-        const expectedScore = 5;
-
-        assert.ok( ajouterPoint(score) == expectedScore );
+        totalPointage = 4;
+        var expectedScore = totalPointage + 1;
+        ajouterPoint()
+        assert.ok( expectedScore == totalPointage )
 });
 QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
     function( assert ) {
-        const score = 0;
-        const expectedScore = 1;
-
-        assert.ok( ajouterPoint(score) == expectedScore );
+        totalPointage = 0;
+        var expectedScore = totalPointage + 1;
+        ajouterPoint()
+        assert.ok( expectedScore == totalPointage )
 });
-
 
 //obtenirPoint
 QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
     function( assert ) {
-        assert.ok( obtenirPoint() == totalpointage );
+        var expectedPointage = 0;
+        assert.ok( obtenirPointage() == expectedPointage );
 });
 
 //estFinPartie
@@ -56,8 +63,3 @@ QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true",
 //majInterface
 //selectionnerChoix
 //afficherBoiteFinDeJeu
-
-QUnit.test( "", 
-    function( assert ) {
-        assert.ok();
-});
