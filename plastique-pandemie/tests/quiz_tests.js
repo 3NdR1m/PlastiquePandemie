@@ -1,7 +1,9 @@
-/** 
- * 
- * 
- */
+QUnit.test( "", 
+    function( assert ) {
+
+        assert.ok(1==1);
+});
+
 //validerQuestion
 QUnit.test( "WHEN_questionIsWrong_THEN_validerQuestion_RETURNS_false", 
     function( assert ) {
@@ -48,9 +50,48 @@ QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true",
         assert.ok( estFinPartie(questionCourante));
 });
 
-
 //chargerQuestionSuivante
+QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
+    function( assert ) {
+        const EXPECTED_NUMBER = 1;
+        questionCourante = EXPECTED_NUMBER;
+        chargerQuestionSuivante()
+        assert.ok(questionCourante == EXPECTED_NUMBER + 1);
+});
+QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
+    function( assert ) {
+        const EXPECTED_NUMBER = 2;
+        questionCourante = EXPECTED_NUMBER;
+        chargerQuestionSuivante()
+        assert.ok(questionCourante == EXPECTED_NUMBER + 1);
+});
+QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
+    function( assert ) {
+        const EXPECTED_NUMBER = 3;
+        questionCourante = EXPECTED_NUMBER;
+        chargerQuestionSuivante()
+        assert.ok(questionCourante == EXPECTED_NUMBER + 1);
+});
+
 //obtenirBonneReponse
+QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1", 
+    function( assert ) {
+        const bonneReponse = obtenirBonneReponse(0);
+        assert.ok(bonneReponse == 0);
+        console.log(bonneReponse)
+});
+QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
+    function( assert ) {
+        const bonneReponse = obtenirBonneReponse(1);
+        assert.ok(bonneReponse == 0);
+});
+QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3", 
+    function( assert ) {
+        const bonneReponse = obtenirBonneReponse(2);
+        assert.ok(bonneReponse == 0);
+        console.log(bonneReponse)
+});
+
 //obtenirChoix
 //afficherBonneReponse
 //majPointage
