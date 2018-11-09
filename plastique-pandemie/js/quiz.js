@@ -149,10 +149,6 @@ function majTexteChoix(noQuestion)
 function majTexteQuestion(noQuestion)
 {
 	$("#texteQuestion").innerText = questionsQuiz[noQuestion][0];
-
-	$('#texteQuestion').removeClass('animated bounceInLeft delay-1s');
-	$('#texteQuestion').removeClass('animated wobble delay-2s');
-	$('#texteQuestion').addClass('animated bounceInLeft delay-1s');
 }
 
 /**
@@ -205,16 +201,15 @@ function majInterface()
 
 /**
  * @name selectionnerChoix
- * @description Modifie l'interface pour changer l'apparence du bouton cliqué et activer le bouton Valider.
+ * @description Validé le choix de réponse et ajour en conséquent
  * @param {*} noChoix Numéro du choix de réponse sélectionné.
  */
 function selectionnerChoix(noChoix)
 {
 	reponseUtilisateur = noChoix;
-	
-	document.getElementById("txtChoix"+noChoix).style.backgroundColor = "lightBlue"; // LINE TO REVIEW
-	document.getElementById("btnSubmitQuestion").disabled = false;
-	document.getElementById("btnSubmitQuestion").style.display = "block";
+	var isGoodAnswer = validerQuestion(questionCourante, reponseUtilisateur);
+
+	jouerSon(isGoodAnswer ? "successAudio": "errorAudio")
 }
 
 /**

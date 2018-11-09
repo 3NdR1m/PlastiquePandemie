@@ -72,7 +72,7 @@
 					</p>
 					<button id="btnStart" type="button" class="btn btn-primary btn-lg">Démarer!</button>
 
-					<form name="formQuiz" onsubmit="return validateForm()" method="post">
+					<form id="formQuiz" name="formQuiz" onchange="selectionnerChoix(this.options.value)" method="post">
 						<fieldset>
 							<legend id="texteQuestion">Question</legend>
 							<div class="btn-group-toggle" data-toggle="buttons">
@@ -91,15 +91,6 @@
 							  </div>
 						</fieldset>
 					</form>
-					
-					<div class="row">
-						<div class="col-12 text-center">
-							<button style="padding:1em; margin:0.5em; display:none" class="btn btn-primary btn-block btn-lg" id="btnSubmitQuestion"
-							 disabled='true'>
-								Valider
-							</button>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -158,27 +149,12 @@
 	
 	<!-- SCRIPT -->
 	<script>
-		document.getElementById("btnStart").addEventListener("click", function(){
-
-		}, false);
 		
-		var btnQuiz = document.gete
-		for(let i = 0; i < NB_CHOIX_MAX; i++)
-		{
-			document.getElementById("btnChoix"+(i + 1)).addEventListener("click", function() {
-				selectionnerChoix();
-				console.log(document.quizForm.options.value);
-			}, false);
-		}
 
-		document.getElementById("btnSubmitQuestion").addEventListener("click", function() {
-			selectionnerChoix(i);
-		}, false);
-		
 	</script>
 	<!-- AUDIO CC0 - https://www.zapsplat.com/ -->
 	<audio id="successAudio">
-		<source src="audio/succes.mp3" type="audio/mpeg" />
+		<source src="audio/succes_2.mp3" type="audio/mpeg" />
 		Votre navigateur ne supporte pas les éléments audio.
 	</audio>
 	<audio id="errorAudio">
