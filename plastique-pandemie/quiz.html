@@ -1,169 +1,194 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Jeu Questionnaire - La Vérité sur la Santé</title>
+<html lang="en">
 
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+	<title>Jeux Quiz - Plastique Pandemie - La vérité sur la santé Québec</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Quiz,Jeux,environement,pollution,plastique,océans,eau,pop,Polluants Organiques Persistants,santé,la verité sur la santé,projet,étudiant,activisme,alimentation,plage">
+    <meta name="author" content="Benjamin Bergeron, Andrew Veillette">
+    <meta name="description" content="Jeux Quiz - Plastique Pandemeie">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Styles du développeur -->
+	<link rel="stylesheet" type="text/css" href="css/jeu.css">
+	<!-- Bibliothèque du développeur -->
+	<script src="js/quiz.js"></script>
+	<script src="js/audio.js"></script>
+	<script src="js/init.js"></script>
+</head>
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CMontserrat" rel="stylesheet">
-
-		<!-- Styles du développeur -->
-		<link rel="stylesheet" type="text/css" href="css/jeu.css">
-
-		<!-- https://github.com/daneden/animate.css -->
-		<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
-		<!-- Bibliothèque du développeur -->
-		<script src="js/quiz.js"></script>
-		<script src="js/audio.js"></script>
-		<script src="js/init.js"></script>
-	</head>
-	<body>
-		<div class="container-fluid" style="opacity: 1.0;">
-			<div class="row text-center">
-				<div class="col-12">
-					<a class="navbar-brand btn " style="font-family: 'Kaushan Script', cursive;font-size: 2em;" href="../">
-						<img src="https://www.laveritesurlasante.com/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" />
-						<span class="text-shadow" style="color:#5a5a5a">La Vérité sur la Santé</span>
-					</a>
-				</div>
-				<div class="col-12">
-					<a class="navbar-brand btn " style="font-family: 'Kaushan Script', cursive;font-size: 2em;" href="./index.html">
-						<span class="text-shadow" style="color:#5a5a5a"></span>PlastiquePandemie</span>
-					</a>
-				</div>
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="../index.html">
+            <img src="images/favicon.png" alt="Logo de La Vérité sur la Santé - Coeur" width="30" height="30" class="d-inline-block align-top">
+            <p class="d-inline-block">La vérité sur la santé<br><br>Plastique Pandemie</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html">Acceuil</a>
+                <a class="nav-item nav-link" href="problematique.html">Le Problème</a>
+                <a class="nav-item nav-link" href="etudes-et-articles-scientifiques-pollution-ocean.html">Études et Articles</a>
+                <a class="nav-item nav-link" href="video-pollution-ocean.html">Vidéos</a>
+                <a class="nav-item nav-link active" href="quiz.html">Jeux-quiz</a>
+            </div>
+        </div>
+    </nav>
+    <!-- MAIN -->
+	<main class="container p-4 my-5">
+		<h1 class="text-center">Plastique Pandemie : Le Jeux-Quiz</h1>
+		<hr>
+		<div class="row" style="padding:1em;">
+			<div class="col-6">
+				<h3>Question # <span id="noQuestionCourante">1</span></h3>
 			</div>
-
-			<div class="row text-center">
-				<div class="col-12">
-					<h1 style="font-family: 'Kaushan Script', cursive; color:green; margin-top:1em">Jeu questionnaire</h1>
-				</div>
+			<div class="col-6 text-right">
+				<h3>Pointage: <span id="totalPoints">0</span>/<span id="totalQuestions"></span></h3>
 			</div>
-
-			<div class="row" style="padding:1em;">
-				<div class="col-6">
-					<h3>Question # <span id="noQuestionCourante">1</span></h3>
-				</div>
-				<div class="col-6 text-right">
-					<h3>Pointage: <span id="totalPoints">0</span>/<span id="totalQuestions"></span></h3>
-				</div>
-			</div>
-		
-			<div class="row">
-				<div class="col-12">
-					<div id="barreProgression"></div>
-				</div>
-			</div>
-
-			<div id="boiteQuestion" class="shadow-lg" style="background-color:#f7f7f7; padding:1em;">
-
-					<div class="question text-center">
-							<div class="question-inner">
-								
-								<p id="texteQuestion" class="animated wobble delay-2s">
-									Bienvenue au jeu questionnaire La Vérité sur la Santé!
-									<br>Préparez-vous à débuter!
-								</p>
-
-							<div class="container">
-										<div class="row" id="boiteChoix">
-											<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix1">
-												<div id="txtChoix0"></div>
-										</div>
-										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix2">
-												<div id="txtChoix1"></div>
-										</div>
-										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix3">
-												<div id="txtChoix2"></div>
-										</div>
-										<div class="col-sm text-center btnChoix shadow-sm" id="btnChoix4">
-												<div id="txtChoix3"></div>
-										</div>
-									</div>
-							</div>
-								<div class="row">
-								<div class="col-12 text-center">
-											<button style="padding:1em; margin:0.5em; display:none" 
-													class="btn btn-primary btn-block btn-lg" 
-													id="btnSubmitQuestion" 
-													disabled='true'>
-											Valider
-										</button>
-									</div>
-								</div>
-
-							</div>
-					</div>
-			</div>
-
-			<div id="resumeQuestion" class="text-center" style="background-color:#f7f7f7; padding:1em;display:none">
-				<h2>Fin de la partie</h2>
-				<button id="btnNouvellePartie" class="btn btn-block btn-lg">Recommencer</button>
-			</div>
-
-			<div id="modalReponse" class="modal" tabindex="-1" role="dialog">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Mauvaise réponse</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<p>La bonne réponse est la suivante : </p>
-							<p id="texteReponse" style="padding-left:0.2em;"></p>
-							<p>Pour plus d'informations : <a id="lienPlusInfos" href="#" target="_blank">#</a></p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fermer</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="auteur" class="text-muted">
-				<p>PlastiquePandemie - 2018</p>
-				<p>Benjamin Bergeron, Andrew Veilleux</p>
-			</div>
-
 		</div>
 
-		<script>
-			//Ajouter votre code ici
-			for(let i = 0; i < NB_CHOIX_MAX; i++)
-			{
-				document.getElementById("btnChoix"+(i + 1)).addEventListener("click", function() {
-					selectionnerChoix(i);
-				}, false);
-			}
+		<div style="background-color: dimgrey;">
+			<div id="barreProgression" class="bg-info" style="height: 5px; width: 0%;"></div>
+		</div>
 
-			document.getElementById("btnSubmitQuestion").addEventListener("click", function() {
-				selectionnerChoix(i);
+		<div id="boiteQuestion">
+			<div class="question text-center">
+				<div class="question-inner">
+
+					<p id="texteQuestion" class="lead">
+						Bienvenue au jeu questionnaire La Vérité sur la Santé - Plastique Pandémie!
+					</p>
+					<p>
+						Préparez-vous à débuter.
+					</p>
+					<button id="btnStart" type="button" class="btn btn-primary btn-lg">Démarer!</button>
+
+					<form name="formQuiz" onsubmit="return validateForm()" method="post">
+						<fieldset>
+							<legend id="texteQuestion">Question</legend>
+							<div class="btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-secondary">
+								  <input type="radio" name="options" id="btnChoix0" autocomplete="off" value="0"> Option1
+								</label>
+								<label class="btn btn-secondary">
+								  <input type="radio" name="options" id="btnChoix1" autocomplete="off" value="1"> Option2
+								</label>
+								<label class="btn btn-secondary">
+								  <input type="radio" name="options" id="btnChoix2" autocomplete="off" value="2"> Option3
+								</label>
+								<label class="btn btn-secondary">
+									<input type="radio" name="options" id="btnChoix3" autocomplete="off" value="3"> Option4
+								</label>
+							  </div>
+						</fieldset>
+					</form>
+					
+					<div class="row">
+						<div class="col-12 text-center">
+							<button style="padding:1em; margin:0.5em; display:none" class="btn btn-primary btn-block btn-lg" id="btnSubmitQuestion"
+							 disabled='true'>
+								Valider
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="resumeQuestion" class="text-center" style="padding:1em;display:none">
+			<h2>Fin de la partie</h2>
+			<button id="btnNouvellePartie" class="btn btn-block btn-lg">Recommencer</button>
+		</div>
+
+		<div id="modalReponse" class="modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Mauvaise réponse</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>La bonne réponse est la suivante : </p>
+						<p id="texteReponse" style="padding-left:0.2em;"></p>
+						<p>Pour plus d'informations : <a id="lienPlusInfos" href="#" target="_blank">#</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid font-small py-2 text-center">
+        <div class="row">
+            <div class="col">
+                <p>Fait par:</p>
+                <p class="name small">Benjamin Bergeron & Andrew Veillette, Octobre 2018</p>
+            </div>
+            <div class="col">
+                <p>Navigation:</p>
+                <ul class="list-unstyled small list-inline">
+                    <li class="list-inline-item"><a href="index.html">Acceuil</a></li>
+                    <li class="list-inline-item"><a href="problematique.html">Le Problème</a></li>
+                    <li class="list-inline-item"><a href="etudes-et-articles-scientifiques-pollution-ocean.html">Études et Articles</a></li>
+                    <li class="list-inline-item"><a href="video-pollution-ocean.html">Vidéos</a></li>
+                    <li class="list-inline-item"><a href="quiz.html">Jeux-quiz</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p>Notre Facebook:</p>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLaVeriteSurLaSante%2F&tabs=timeline&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="70"
+                    style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
+            </div>
+        </div>
+	</footer>
+	
+	<!-- SCRIPT -->
+	<script>
+		document.getElementById("btnStart").addEventListener("click", function(){
+
+		}, false);
+		
+		var btnQuiz = document.gete
+		for(let i = 0; i < NB_CHOIX_MAX; i++)
+		{
+			document.getElementById("btnChoix"+(i + 1)).addEventListener("click", function() {
+				selectionnerChoix();
+				console.log(document.quizForm.options.value);
 			}, false);
-			
-		</script>
+		}
 
-		<!-- Audio CC0 - https://www.zapsplat.com/ -->
-		<audio id="successAudio">
-			<source src="audio/succes.mp3" type="audio/mpeg" />
-			Votre navigateur ne supporte pas les éléments audio.
-		</audio>
-		<audio id="errorAudio">
-			<source src="audio/echec.mp3" type="audio/mpeg" />
-			Votre navigateur ne supporte pas les éléments audio.
-		</audio>
-		<audio id="introAudio">
-			<source src="audio/intro.mp3" type="audio/mpeg" />
-			Votre navigateur ne supporte pas les éléments audio.
-		</audio>
+		document.getElementById("btnSubmitQuestion").addEventListener("click", function() {
+			selectionnerChoix(i);
+		}, false);
+		
+	</script>
+	<!-- AUDIO CC0 - https://www.zapsplat.com/ -->
+	<audio id="successAudio">
+		<source src="audio/succes.mp3" type="audio/mpeg" />
+		Votre navigateur ne supporte pas les éléments audio.
+	</audio>
+	<audio id="errorAudio">
+		<source src="audio/echec.mp3" type="audio/mpeg" />
+		Votre navigateur ne supporte pas les éléments audio.
+	</audio>
+	<audio id="introAudio">
+		<source src="audio/intro.mp3" type="audio/mpeg" />
+		Votre navigateur ne supporte pas les éléments audio.
+	</audio>
+</body>
 
-	</body>
 </html>

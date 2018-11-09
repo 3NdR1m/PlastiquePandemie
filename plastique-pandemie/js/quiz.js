@@ -107,7 +107,7 @@ function obtenirChoix(noQuestion)
 function afficherBonneReponse(noQuestion) {
 	document.getElementById("modalReponse").style.display = "block";
 	document.getElementById("texteReponse").textContent = obtenirBonneReponse(noQuestion)
-	document.getElementById("lienPlusInfos").href = "";
+	document.getElementById("lienPlusInfos").href = questionsQuiz[noQuestion][1];
 }
 
 /**
@@ -182,8 +182,10 @@ function remiseAZeroBoutons() {
  */
 function majProgression()
 {
-	document.getElementById("barreProgression")
-	//ajouter votre code ici
+	let avancement = ( questionCourante / MAX_QUESTIONS ) * 100;
+	var barre = document.getElementById("barreProgression");
+
+	barre.style.width = avancement+"%";
 }
 
 /**
@@ -200,6 +202,7 @@ function majInterface()
 	majPointage();
 }
 
+
 /**
  * @name selectionnerChoix
  * @description Modifie l'interface pour changer l'apparence du bouton cliqué et activer le bouton Valider.
@@ -207,6 +210,8 @@ function majInterface()
  */
 function selectionnerChoix(noChoix)
 {
+	reponseUtilisateur = noChoix;
+	
 	document.getElementById("txtChoix"+noChoix).style.backgroundColor = "lightBlue"; // LINE TO REVIEW
 	document.getElementById("btnSubmitQuestion").disabled = false;
 	document.getElementById("btnSubmitQuestion").style.display = "block";

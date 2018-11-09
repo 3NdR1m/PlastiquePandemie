@@ -93,7 +93,7 @@ function choisirQuestions()
  * @name init
  * @description Fonction d'initialisation du quiz.
  */
-function init() 
+var init = function() 
 {
   questionCourante = 0;
   choisirQuestions();
