@@ -39,6 +39,7 @@ QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1",
 //obtenirPoint
 QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
     function( assert ) {
+        totalPointage = 0;
         var expectedPointage = 0;
         assert.ok( obtenirPointage() == expectedPointage );
 });
@@ -92,9 +93,37 @@ QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3",
 
 //obtenirChoix
 //afficherBonneReponse
-
 //majPointage
+QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1", 
+    function( assert ) {
+        totalPointage = 2;
+        majPointage();
+        var check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage);
+});
+QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_2", 
+    function( assert ) {
+        totalPointage = 3;
+        majPointage();
+        var check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage);
+});
+QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3", 
+    function( assert ) {
+        totalPointage = 0;
+        majPointage();
+        var check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage);
+});
+
 //majTotalQuestion
+QUnit.test( "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage", 
+    function( assert ) {
+        majTotalQuestion();
+        var check = document.getElementById("totalQuestions").textContent;
+        assert.ok(check==MAX_QUESTIONS);
+});
+
 //majTexteChoix
 //majTexteQuestion
 //majNoQuestionCourant
