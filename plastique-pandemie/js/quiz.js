@@ -213,3 +213,10 @@ function afficherBoiteFinDeJeu()
 	document.getElementById("boiteQuestion").style.display = "none";
 	document.getElementById("resumeQuestion").style.display = "block";
 }
+
+function showQuizElements() {
+	var element = document.getElementByClassName("hid");
+	element.classList.remove("hid");
+	var toHide = document.getElementById("toHide");
+	toHide.classList.add("hid")
+}
