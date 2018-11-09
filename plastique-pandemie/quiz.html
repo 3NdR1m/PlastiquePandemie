@@ -47,7 +47,7 @@
 	<main class="container p-4 my-5">
 		<h1 class="text-center">Plastique Pandemie : Le Jeux-Quiz</h1>
 		<hr>
-		<div class="row" style="padding:1em;">
+		<div class="row hid" style="padding:1em;">
 			<div class="col-6">
 				<h3>Question # <span id="noQuestionCourante">1</span></h3>
 			</div>
@@ -63,34 +63,36 @@
 		<div id="boiteQuestion">
 			<div class="question text-center">
 				<div class="question-inner">
-
-					<p id="texteQuestion" class="lead">
-						Bienvenue au jeu questionnaire La Vérité sur la Santé - Plastique Pandémie!
-					</p>
-					<p>
-						Préparez-vous à débuter.
-					</p>
+					<div id="toHide">
+						<p id="texteQuestion" class="lead">
+							Bienvenue au jeu questionnaire La Vérité sur la Santé - Plastique Pandémie!
+						</p>
+						<p>
+							Préparez-vous à débuter.
+						</p>
+					</div>
 					<button id="btnStart" type="button" class="btn btn-primary btn-lg">Démarer!</button>
-
-					<form id="formQuiz" name="formQuiz" onchange="selectionnerChoix(this.options.value)" method="post">
-						<fieldset>
-							<legend id="texteQuestion">Question</legend>
-							<div class="btn-group-toggle" data-toggle="buttons">
-								<label class="btn btn-secondary">
-								  <input type="radio" name="options" id="btnChoix0" autocomplete="off" value="0"> Option1
-								</label>
-								<label class="btn btn-secondary">
-								  <input type="radio" name="options" id="btnChoix1" autocomplete="off" value="1"> Option2
-								</label>
-								<label class="btn btn-secondary">
-								  <input type="radio" name="options" id="btnChoix2" autocomplete="off" value="2"> Option3
-								</label>
-								<label class="btn btn-secondary">
-									<input type="radio" name="options" id="btnChoix3" autocomplete="off" value="3"> Option4
-								</label>
-							  </div>
-						</fieldset>
-					</form>
+					<div class="hid">
+						<form id="formQuiz" name="formQuiz" onchange="selectionnerChoix(this.options.value)" method="post">
+							<fieldset>
+								<legend id="texteQuestion">Question</legend>
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-secondary">
+									<input type="radio" name="options" id="btnChoix0" autocomplete="off" value="0"> Option1
+									</label>
+									<label class="btn btn-secondary">
+									<input type="radio" name="options" id="btnChoix1" autocomplete="off" value="1"> Option2
+									</label>
+									<label class="btn btn-secondary">
+									<input type="radio" name="options" id="btnChoix2" autocomplete="off" value="2"> Option3
+									</label>
+									<label class="btn btn-secondary">
+										<input type="radio" name="options" id="btnChoix3" autocomplete="off" value="3"> Option4
+									</label>
+								</div>
+							</fieldset>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

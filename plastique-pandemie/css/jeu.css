@@ -18,3 +18,7 @@ body{
 	background-color: lightgreen;
 	color: green;
 }
+
+.hid {
+	display:none;
+}
