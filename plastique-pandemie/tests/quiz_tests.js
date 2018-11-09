@@ -78,7 +78,6 @@ QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1",
     function( assert ) {
         const bonneReponse = obtenirBonneReponse(0);
         assert.ok(bonneReponse == 0);
-        console.log(bonneReponse)
 });
 QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
     function( assert ) {
@@ -89,11 +88,11 @@ QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3",
     function( assert ) {
         const bonneReponse = obtenirBonneReponse(2);
         assert.ok(bonneReponse == 0);
-        console.log(bonneReponse)
 });
 
 //obtenirChoix
 //afficherBonneReponse
+
 //majPointage
 //majTotalQuestion
 //majTexteChoix
