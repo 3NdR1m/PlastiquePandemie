@@ -8,13 +8,22 @@ body{
 #barreProgression {
 	transition: width 0.5s;
 }
-
+.btn-group-toggle {
+	margin: 0px;
+	margin-bottom: 20px;
+}
 .btn-secondary {
-	padding: 25px;
 	background-color: lightblue;
 	color: whitesmoke;
 }
 .btn-secondary:not(:disabled):not(.disabled).active {
-	background-color: lightgreen;
-	color: green;
+	background-color: cadetblue;
+}
+
+label>p{
+	margin: 8px;
+}
+
+label{
+	margin: 2px;
 }

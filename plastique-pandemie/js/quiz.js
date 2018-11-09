@@ -15,14 +15,7 @@
 function validerQuestion(noQuestion, choixUtilisateur)
 {
 	const INDEX_BONNE_REPONSE = 1;
-	if(choixUtilisateur == questionsQuiz[noQuestion][INDEX_BONNE_REPONSE])
-	{
-		return true;
-	}
-	else
-	{
-		return false
-	}
+	return (choixUtilisateur == questionsQuiz[noQuestion][INDEX_BONNE_REPONSE]);
 }
 
 /**
@@ -137,7 +130,8 @@ function majTexteChoix(noQuestion)
 {
 	var choix = obtenirChoix(noQuestion);
 	for (let i = 0; i < choix.length; i++) {
-		document.getElementById("txtChoix"+i).innerText = choix[i];
+		// edit text of p
+		document.formQuiz.options[i].nextElementSibling.textContent = choix[i];
 	}
 }
 
@@ -148,7 +142,8 @@ function majTexteChoix(noQuestion)
  */
 function majTexteQuestion(noQuestion)
 {
-	$("#texteQuestion").innerText = questionsQuiz[noQuestion][0];
+	document
+	document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion][0];
 }
 
 /**
@@ -198,18 +193,15 @@ function majInterface()
 	majPointage();
 }
 
-
 /**
  * @name selectionnerChoix
- * @description Validé le choix de réponse et ajour en conséquent
+ * @description Modifie l'interface pour changer l'apparence du bouton cliqué et activer le bouton Valider.
  * @param {*} noChoix Numéro du choix de réponse sélectionné.
  */
 function selectionnerChoix(noChoix)
 {
 	reponseUtilisateur = noChoix;
-	var isGoodAnswer = validerQuestion(questionCourante, reponseUtilisateur);
-
-	jouerSon(isGoodAnswer ? "successAudio": "errorAudio")
+	document.getElementById("btnConfirmer").disabled = false;
 }
 
 /**
