@@ -43,16 +43,9 @@ function obtenirPointage()
  * @param {*} questionCourante Index de la question courante
  * @returns true si l'index de la question courrante est égal au nombre maximum de questions, sinon faux
  */
-function estFinPartie(questionCourante)
+function estFinPartie()
 {
-	if(questionCourante == MAX_QUESTIONS)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (questionCourante == MAX_QUESTIONS);
 }
 
 /**
@@ -72,8 +65,7 @@ function chargerQuestionSuivante()
  */
 function obtenirBonneReponse(noQuestion)
 {
-	chargerQuestionSuivante();
-	return questionsQuiz[noQuestion][1];
+	return questionsQuiz[noQuestion][POS_REPONSE];
 }
 
 /**
@@ -98,8 +90,8 @@ function obtenirChoix(noQuestion)
  * @param {*} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
 function afficherBonneReponse(noQuestion) {
-	document.getElementById("modalReponse").style.display = "block";
-	document.getElementById("texteReponse").textContent = obtenirBonneReponse(noQuestion)
+	$('#modalReponse').modal("show");
+	document.getElementById("texteReponse").textContent = questionsQuiz[noQuestion][obtenirBonneReponse(noQuestion) + 3];
 	document.getElementById("lienPlusInfos").href = questionsQuiz[noQuestion][1];
 }
 
@@ -160,11 +152,7 @@ function majNoQuestionCourant()
  * @description Modifie l'interface en remettant à l'état initial les boutons de réponse.
  */
 function remiseAZeroBoutons() {
-	//ajouter votre code ici
-	var btns = document.getElementsByClassName("btnChoix");
-	for (let i = 0; i < btns.length; i++) {
-		btns[i];
-	}
+	$('.btn').removeClass('active');
 }
 
 /**
@@ -191,6 +179,7 @@ function majInterface()
 	majPointage();
 	majProgression();
 	majPointage();
+	document.getElementById("btnConfirmer").disabled = true;
 }
 
 /**
@@ -210,8 +199,9 @@ function selectionnerChoix(noChoix)
  */
 function afficherBoiteFinDeJeu()
 {
-	document.getElementById("boiteQuestion").style.display = "none";
-	document.getElementById("resumeQuestion").style.display = "block";
+	document.getElementById("questionBox").style.display = "none";
+	document.getElementById("gameOverBox").style.display = "block";
+	document.getElementById("totalScore").textContent = totalPointage;
 }
 
 function showQuizElements() {

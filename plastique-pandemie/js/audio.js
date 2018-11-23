@@ -2,6 +2,6 @@
 
 function jouerSon(elementId)
 {
-	var audio = document.getElementById(elementId); 
+	let audio = document.getElementById(elementId); 
 	audio.play(); 
 }
