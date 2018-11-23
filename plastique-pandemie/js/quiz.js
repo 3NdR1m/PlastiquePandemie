@@ -206,7 +206,7 @@ function afficherBoiteFinDeJeu()
 
 function showQuizElements() {
 	var element = document.getElementByClassName("hid");
-	element.classList.remove("hid");
+	element.classList.remove("d-none");
 	var toHide = document.getElementById("toHide");
-	toHide.classList.add("hid")
+	toHide.classList.add("d-none")
 }
