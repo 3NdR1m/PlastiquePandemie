@@ -45,7 +45,7 @@ QUnit.module("Question Response Dynamic",
                 var expectedPointage = 0;
                 assert.ok( obtenirPointage() == expectedPointage );
         });
-    });
+});
 
 QUnit.module("Quiz Continuity Dynamic",
     function() {
@@ -95,7 +95,7 @@ QUnit.module("Quiz Continuity Dynamic",
                 const bonneReponse = obtenirBonneReponse(2);
                 assert.ok(bonneReponse == 0);
         });
-    });
+});
 
 QUnit.module("User Interface Update",
     function() {
@@ -140,4 +140,4 @@ QUnit.module("User Interface Update",
         //majInterface
         //selectionnerChoix
         //afficherBoiteFinDeJeu
-    });
+});
