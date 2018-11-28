@@ -52,7 +52,7 @@ QUnit.module("Quiz Continuity Dynamic",
         //estFinPartie
         QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true", 
             function( assert ) {
-                questionCourante = 3;
+                questionCourante = MAX_QUESTIONS;
                 assert.ok( estFinPartie(questionCourante));
         });
 
@@ -88,12 +88,12 @@ QUnit.module("Quiz Continuity Dynamic",
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
             function( assert ) {
                 const bonneReponse = obtenirBonneReponse(1);
-                assert.ok(bonneReponse == 0);
+                assert.ok(bonneReponse == 2);
         });
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3", 
             function( assert ) {
                 const bonneReponse = obtenirBonneReponse(2);
-                assert.ok(bonneReponse == 0);
+                assert.ok(bonneReponse == 3);
         });
 });
 

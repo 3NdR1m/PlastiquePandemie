@@ -62,7 +62,7 @@ const tableauQuestions = [
   ["Combien de tonne de plastique son jetée à l'océan à chaque seconde", 2, "LIEN_RÉPONSE", "1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"],
   ["Lequelle de ces nom ne désigne pas un océan?", 3, "LIEN_RÉPONSE", "Pacifique", "Artique", "Indien", "Caraïbe"],
   ["Combien de décharge océaniques sont connues à ce jour?", 3, "etudes-et-articles-scientifiques-pollution-ocean.html", "3", "7", "6", "5"],
-  ["Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?", 4, "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/", "Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"],
+  ["Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?", 3, "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/", "Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"],
   ["QUESTION_6", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
   ["QUESTION_7", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
   ["QUESTION_8", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
