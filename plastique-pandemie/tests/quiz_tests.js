@@ -82,18 +82,30 @@ QUnit.module("Quiz Continuity Dynamic",
         //obtenirBonneReponse
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1", 
             function( assert ) {
-                const bonneReponse = obtenirBonneReponse(0);
-                assert.ok(bonneReponse == 0);
+                questionQuiz = [["Q1",2,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                var questionCourante = 0;
+                const correctAnswer = obtenirBonneReponse(questionCourante);
+
+                const EXPECTED_RESULT = "Q1-C2"
+                assert.ok(correctAnswer == EXPECTED_RESULT);
         });
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
             function( assert ) {
-                const bonneReponse = obtenirBonneReponse(1);
-                assert.ok(bonneReponse == 2);
+                questionQuiz = [["Q1",3,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                var questionCourante = 0;
+                const correctAnswer = obtenirBonneReponse(questionCourante);
+
+                const EXPECTED_RESULT = "Q1-C3"
+                assert.ok(correctAnswer == EXPECTED_RESULT);
         });
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3", 
             function( assert ) {
-                const bonneReponse = obtenirBonneReponse(2);
-                assert.ok(bonneReponse == 3);
+                questionQuiz = [["Q1",4,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                var questionCourante = 0;
+                const correctAnswer = obtenirBonneReponse(questionCourante);
+
+                const EXPECTED_RESULT = "Q1-C4"
+                assert.ok(correctAnswer == EXPECTED_RESULT);
         });
 });
 
