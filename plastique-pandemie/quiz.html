@@ -25,6 +25,7 @@
 	<script src="js/quiz.js"></script>
 	<script src="js/audio.js"></script>
 	<script src="js/init.js"></script>
+	<script src="js/costum-lib.js"></script>
 </head>
 
 <body>
@@ -100,7 +101,7 @@
 			</form>
 		</div>
 
-		<div id="gameOverBox" class="text-center" style="display:none">
+		<div id="gameOverBox" class="text-center d-none">
 			<h2>Fin de la partie</h2>
 			<p>Votre score: <span id="totalScore">0</span>/<span id="totalQuestions2"></span></p>
 			<button id="btnNouvellePartie" class="btn btn-lg">Recommencer</button>
@@ -116,6 +117,11 @@
 						</button>
 					</div>
 					<div class="modal-body">
+
+						<div style="width:100%;height:0;padding-bottom:63%;position:relative;">
+							<iframe id="giphy-fail" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"></iframe>
+						</div>
+
 						<p>La bonne réponse était: "<span id="texteReponse" style="font-weight: bold;"></span>"</p>
 						<a id="lienPlusInfos" href="#" target="_blank">Cliquez ici pour vous renseignez</a>
 					</div>
@@ -162,6 +168,9 @@
 			} else {
 				jouerSon("errorAudio");
 				afficherBonneReponse(questionCourante);
+				getRandomGiphy("failed facepalm", function(srcUrl){
+					document.getElementById("giphy-fail").src = srcUrl;
+				});
 			}
 			
 			document.getElementById("formQuiz").reset();

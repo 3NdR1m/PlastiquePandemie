@@ -134,7 +134,6 @@ function majTexteChoix(noQuestion)
  */
 function majTexteQuestion(noQuestion)
 {
-	document
 	document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion][0];
 }
 
@@ -144,7 +143,7 @@ function majTexteQuestion(noQuestion)
  */
 function majNoQuestionCourant()
 {	
-	document.getElementById("noQuestionCourante").textContent = questionCourante;
+	document.getElementById("noQuestionCourante").textContent = questionCourante + 1;
 }
 
 /**
@@ -176,6 +175,7 @@ function majInterface()
 	var n = questionCourante;
 	majTexteChoix(n);
 	majTexteQuestion(n);
+	majNoQuestionCourant();
 	majPointage();
 	majProgression();
 	majPointage();
