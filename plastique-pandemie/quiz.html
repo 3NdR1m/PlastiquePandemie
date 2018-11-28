@@ -25,7 +25,6 @@
 	<script src="js/quiz.js"></script>
 	<script src="js/audio.js"></script>
 	<script src="js/init.js"></script>
-	<script src="js/costum-lib.js"></script>
 </head>
 
 <body>
@@ -69,7 +68,7 @@
 					<h3>Question # <span id="noQuestionCourante">1</span></h3>
 				</div>
 				<div class="col-6 text-right">
-					<h3>Pointage: <span id="totalPoints">0</span>/<span id="totalQuestions"></span></h3>
+					<h3>Pointage: <span id="totalPoints">0</span>/<span class="totalQuestions"></span></h3>
 				</div>
 			</div>
 			<div style="background-color: dimgrey;">
@@ -101,9 +100,9 @@
 			</form>
 		</div>
 
-		<div id="gameOverBox" class="text-center d-none">
+		<div id="gameOverBox" class="text-center" style="display: none;">
 			<h2>Fin de la partie</h2>
-			<p>Votre score: <span id="totalScore">0</span>/<span id="totalQuestions2"></span></p>
+			<p>Votre score: <span id="totalScore">0</span>/<span class="totalQuestions"></span></p>
 			<button id="btnNouvellePartie" class="btn btn-lg">Recommencer</button>
 		</div>
 
@@ -117,11 +116,6 @@
 						</button>
 					</div>
 					<div class="modal-body">
-
-						<div style="width:100%;height:0;padding-bottom:63%;position:relative;">
-							<iframe id="giphy-fail" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"></iframe>
-						</div>
-
 						<p>La bonne réponse était: "<span id="texteReponse" style="font-weight: bold;"></span>"</p>
 						<a id="lienPlusInfos" href="#" target="_blank">Cliquez ici pour vous renseignez</a>
 					</div>
@@ -162,25 +156,27 @@
 		// Confirmer option
 		document.getElementById("btnConfirmer").onclick = function(){
 			var isGoodAnswer = validerQuestion(questionCourante, reponseUtilisateur);
-			if (isGoodAnswer) {
+			if (isGoodAnswer)
+			{
 				ajouterPoint();
 				jouerSon("successAudio");
-			} else {
+			} 
+			else
+			{
 				jouerSon("errorAudio");
 				afficherBonneReponse(questionCourante);
-				getRandomGiphy("failed facepalm", function(srcUrl){
-					document.getElementById("giphy-fail").src = srcUrl;
-				});
 			}
 			
 			document.getElementById("formQuiz").reset();
 			remiseAZeroBoutons();
 
 			chargerQuestionSuivante();
-			if(estFinPartie()){
+			if(estFinPartie())
+			{
 				afficherBoiteFinDeJeu();
 			}
-			else{
+			else
+			{
 				majInterface();
 			}
 		}

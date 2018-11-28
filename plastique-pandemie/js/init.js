@@ -107,8 +107,7 @@ function init() {
   questionCourante = 0;
   totalPointage = 0;
   choisirQuestions();
-  document.getElementById("totalQuestions").innerHTML = MAX_QUESTIONS;
-  document.getElementById("totalQuestions2").innerHTML = MAX_QUESTIONS;
+  $(".totalQuestions").text(MAX_QUESTIONS);
 }
 
 window.onload = init;
