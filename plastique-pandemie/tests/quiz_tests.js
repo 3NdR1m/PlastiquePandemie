@@ -82,29 +82,29 @@ QUnit.module("Quiz Continuity Dynamic",
         //obtenirBonneReponse
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1", 
             function( assert ) {
-                questionQuiz = [["Q1",2,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                questionQuiz = [["Q1",1,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
                 var questionCourante = 0;
-                const correctAnswer = obtenirBonneReponse(questionCourante);
+                var correctAnswer = obtenirBonneReponse(questionCourante);
 
-                const EXPECTED_RESULT = "Q1-C2"
+                var EXPECTED_RESULT = 3;
                 assert.ok(correctAnswer == EXPECTED_RESULT);
         });
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
             function( assert ) {
-                questionQuiz = [["Q1",3,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                questionQuiz = [["Q1",2,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
                 var questionCourante = 0;
-                const correctAnswer = obtenirBonneReponse(questionCourante);
+                var correctAnswer = obtenirBonneReponse(questionCourante);
 
-                const EXPECTED_RESULT = "Q1-C3"
+                var EXPECTED_RESULT = 3;
                 assert.ok(correctAnswer == EXPECTED_RESULT);
         });
         QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3", 
             function( assert ) {
-                questionQuiz = [["Q1",4,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
+                questionQuiz = [["Q1",3,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
                 var questionCourante = 0;
-                const correctAnswer = obtenirBonneReponse(questionCourante);
+                var correctAnswer = obtenirBonneReponse(questionCourante);
 
-                const EXPECTED_RESULT = "Q1-C4"
+                var EXPECTED_RESULT = 3;
                 assert.ok(correctAnswer == EXPECTED_RESULT);
         });
 });
