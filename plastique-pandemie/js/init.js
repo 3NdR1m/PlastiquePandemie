@@ -65,9 +65,9 @@ const tableauQuestions = [
   ["Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?", 3, "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/", "Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"],
   ["Pourquoi la cellulose est-elle non-poluante, malgré être un polymer?", 1, "https://en.wikipedia.org/wiki/Cellulose", "Fait a base d'oxygene", "Fait a base de nitrogene", "Fait a base de carbonne", "Fait a base de sodium"],
   ["La Bioaccumulation de plastique est le procédé dans le quel:", 1, "https://www.nature.com/articles/srep03263", "Le plastique grimpe la chaine alimentaire", "Le plastique est digeré", "Le plastique est retourné à la nature", "Le plastique infecte l'environement"],
-  ["QUESTION_8", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
-  ["QUESTION_9", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
-  ["QUESTION_10", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"]
+  ["En 2017, combien d'argent fut investis globalement dans des sources d'énergies renouvelables?", 3, "https://europa.eu/capacity4dev/file/71900/download?token=57xpTJ4W", "275 Millions", "275 Trillions", "275 Billions", "275 Milliards"],
+  ["Dans le but de créer des bioréacteurs plus éfficaces, certaines recherchistes proposent...", 2, "https://pp.bme.hu/ch/article/download/11096/7968/", "Des catalysts plus violants", "La domestication d'algues", "Des biorécateurs industrielles", "Des bioréacteurs locaux"],
+  ["Parmi ces réponses, lequel n'éxiste pas?", 4, "LIEN_RÉPONSE", "Bactérie plastivore", "Verre de terre plastivore", "Champignon plastivore", "Algue plastivore"]
 ];
 
 /**

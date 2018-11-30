@@ -13,7 +13,7 @@ body{
 }
 .btn-secondary {
 	background-color: lightblue;
-	color: whitesmoke;
+	color: rgb(0, 0, 0);
 }
 .btn-secondary:not(:disabled):not(.disabled).active {
 	background-color: cadetblue;

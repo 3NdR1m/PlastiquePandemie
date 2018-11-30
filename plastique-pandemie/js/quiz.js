@@ -208,5 +208,6 @@ function showQuizElements() {
 	var element = document.getElementByClassName("hid");
 	element.classList.remove("d-none");
 	var toHide = document.getElementById("toHide");
-	toHide.classList.add("d-none")
+	toHide.classList.add("d-none");
+	jouerSon(intro);
 }
