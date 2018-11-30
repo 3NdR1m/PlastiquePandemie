@@ -58,8 +58,8 @@ var reponseUtilisateur = 0;
  * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
  */
 const tableauQuestions = [
-  ["Que signifie l'acronyme 'POP'", 0, "https://fr.wikipedia.org/wiki/Polluant_organique_persistant", "Polluants Organiques Persistants", "Projets Ocean Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique"],
-  ["Combien de tonnes de plastique son jetée à l'océan à chaque seconde", 2, "LIEN_RÉPONSE", "1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"],
+  ["Que signifie l'acronyme 'POP'?", 0, "https://fr.wikipedia.org/wiki/Polluant_organique_persistant", "Polluants Organiques Persistants", "Projets Ocean Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique"],
+  ["Combien de tonnes de plastique son jetée à l'océan à chaque seconde?", 2, "LIEN_RÉPONSE", "1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"],
   ["Lequelle de ces nom ne désigne pas un océan?", 3, "LIEN_RÉPONSE", "Pacifique", "Artique", "Indien", "Caraïbe"],
   ["Combien de décharge océaniques sont connues à ce jour?", 3, "etudes-et-articles-scientifiques-pollution-ocean.html", "3", "7", "6", "5"],
   ["Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?", 3, "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/", "Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"],
