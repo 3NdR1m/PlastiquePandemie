@@ -188,8 +188,8 @@
 		document.getElementById("btnNouvellePartie").onclick = function(){
 			init();
 			majInterface();
-			document.getElementById("questionBox").style.display = "block";
-			document.getElementById("gameOverBox").style.display = "none";
+			document.getElementById("questionBox").classList.remove("d-none");
+			document.getElementById("gameOverBox").classList.add("d-none");
 		}
 
 	</script>

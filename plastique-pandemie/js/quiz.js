@@ -205,9 +205,9 @@ function afficherBoiteFinDeJeu()
 }
 
 function showQuizElements() {
-	var element = document.getElementByClassName("hid");
+	var element = document.getElementById("questionBox");
 	element.classList.remove("d-none");
-	var toHide = document.getElementById("toHide");
+	var toHide = document.getElementById("greetingBox");
 	toHide.classList.add("d-none");
-	jouerSon(intro);
+	jouerSon(introAudio);
 }
