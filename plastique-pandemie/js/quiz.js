@@ -199,8 +199,8 @@ function selectionnerChoix(noChoix)
  */
 function afficherBoiteFinDeJeu()
 {
-	document.getElementById("questionBox").style.display = "none";
-	document.getElementById("gameOverBox").style.display = "block";
+	document.getElementById("questionBox").classList.add("d-none");
+	document.getElementById("gameOverBox").classList.remove("d-none");
 	document.getElementById("totalScore").textContent = totalPointage;
 }
 
