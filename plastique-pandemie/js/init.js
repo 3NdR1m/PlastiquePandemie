@@ -58,16 +58,16 @@ var reponseUtilisateur = 0;
  * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
  */
 const tableauQuestions = [
-  ["Que signifie l'acronyme 'POP'", 0, "https://fr.wikipedia.org/wiki/Polluant_organique_persistant", "Polluants Organiques Persistants", "Projets Ocean Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique"],
-  ["Combien de tonnes de plastique son jetée à l'océan à chaque seconde", 2, "LIEN_RÉPONSE", "1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"],
+  ["Que signifie l'acronyme 'POP'?", 0, "https://fr.wikipedia.org/wiki/Polluant_organique_persistant", "Polluants Organiques Persistants", "Projets Ocean Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique"],
+  ["Combien de tonnes de plastique son jetée à l'océan à chaque seconde?", 2, "LIEN_RÉPONSE", "1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"],
   ["Lequelle de ces nom ne désigne pas un océan?", 3, "LIEN_RÉPONSE", "Pacifique", "Artique", "Indien", "Caraïbe"],
   ["Combien de décharge océaniques sont connues à ce jour?", 3, "etudes-et-articles-scientifiques-pollution-ocean.html", "3", "7", "6", "5"],
   ["Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?", 3, "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/", "Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"],
-  ["Pourquoi la cellulose est-elle non-poluante, malgré être un polymer?", 1, "https://en.wikipedia.org/wiki/Cellulose", "Fait a base d'oxygene", "Fait a base de nitrogene", "Fait a base de carbonne", "Fait a base de sodium"],
-  ["La Bioaccumulation de plastique est le procédé dans le quel:", 1, "https://www.nature.com/articles/srep03263", "Le plastique grimpe la chaine alimentaire", "Le plastique est digeré", "Le plastique est retourné à la nature", "Le plastique infecte l'environement"],
-  ["QUESTION_8", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
-  ["QUESTION_9", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"],
-  ["QUESTION_10", 0, "LIEN_RÉPONSE", "RÉPONSE_1", "RÉPONSE_2", "RÉPONSE_3", "RÉPONSE_4"]
+  ["Pourquoi la cellulose est-elle non-poluante, malgré être un polymer?", 0, "https://en.wikipedia.org/wiki/Cellulose", "Fait a base d'oxygene", "Fait a base de nitrogene", "Fait a base de carbonne", "Fait a base de sodium"],
+  ["La Bioaccumulation de plastique est le procédé dans le quel:", 1, "https://www.nature.com/articles/srep03263", "Le plastique est digeré", "Le plastique grimpe la chaine alimentaire", "Le plastique est retourné à la nature", "Le plastique infecte l'environement"],
+  ["En 2017, combien d'argent fut investis globalement dans des sources d'énergies renouvelables?", 2, "https://europa.eu/capacity4dev/file/71900/download?token=57xpTJ4W", "275 Millions", "275 Trillions", "275 Billions", "275 Milliards"],
+  ["Dans le but de créer des bioréacteurs plus éfficaces, certaines recherchistes proposent...", 1, "https://pp.bme.hu/ch/article/download/11096/7968/", "Des catalysts plus violants", "La domestication d'algues", "Des biorécateurs industrielles", "Des bioréacteurs locaux"],
+  ["Parmi ces réponses, lequel n'éxiste pas?", 3, "LIEN_RÉPONSE", "Bactérie plastivore", "Verre de terre plastivore", "Champignon plastivore", "Algue plastivore"]
 ];
 
 /**

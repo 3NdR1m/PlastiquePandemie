@@ -199,14 +199,15 @@ function selectionnerChoix(noChoix)
  */
 function afficherBoiteFinDeJeu()
 {
-	document.getElementById("questionBox").style.display = "none";
-	document.getElementById("gameOverBox").style.display = "block";
+	document.getElementById("questionBox").classList.add("d-none");
+	document.getElementById("gameOverBox").classList.remove("d-none");
 	document.getElementById("totalScore").textContent = totalPointage;
 }
 
 function showQuizElements() {
-	var element = document.getElementByClassName("hid");
+	var element = document.getElementById("questionBox");
 	element.classList.remove("d-none");
-	var toHide = document.getElementById("toHide");
-	toHide.classList.add("d-none")
+	var toHide = document.getElementById("greetingBox");
+	toHide.classList.add("d-none");
+	jouerSon(introAudio);
 }

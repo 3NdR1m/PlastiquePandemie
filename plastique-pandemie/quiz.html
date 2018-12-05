@@ -77,7 +77,7 @@
 			</div>
 			<form id="formQuiz" class="container" name="formQuiz" method="GET">
 				<fieldset>
-					<legend class="text-sm-left"><span id="texteQuestion">Question</span>?</legend>
+					<legend class="text-sm-left"><span id="texteQuestion">Question</span></legend>
 					<div class="btn-group-toggle row" data-toggle="buttons" class="text-center">
 						<label class="btn btn-secondary col">
 							<input type="radio" name="options" id="btnChoix0" autocomplete="off" value="0">
@@ -185,8 +185,8 @@
 		document.getElementById("btnNouvellePartie").onclick = function(){
 			init();
 			majInterface();
-			document.getElementById("questionBox").style.display = "block";
-			document.getElementById("gameOverBox").style.display = "none";
+			document.getElementById("questionBox").classList.remove("d-none");
+			document.getElementById("gameOverBox").classList.add("d-none");
 		}
 
 	</script>
