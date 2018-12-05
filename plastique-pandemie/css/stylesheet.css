@@ -1,8 +1,4 @@
 /* Met l'image de fond */
-html {
-    min-height: 100%;
-}
-
 body {
     background: url('../images/background.jpg') no-repeat fixed center;
     background-size: cover;
