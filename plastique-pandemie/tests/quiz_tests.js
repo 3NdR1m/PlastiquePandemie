@@ -1,117 +1,164 @@
-QUnit.test( "", 
-    function( assert ) {
-
-        assert.ok(1==1);
+questionsQuiz = [
+    // Don't implement untested field such as questions, link and options
+    { indexBonneReponse: 1 },
+    { indexBonneReponse: 5 },
+    { indexBonneReponse: -6 },
+    { indexBonneReponse: 0 }
+]
+QUnit.module.todo("init.js", function()
+{
+    
 });
+QUnit.module("quiz.js", function( hooks )
+{
+    // Do before all; declare tested objects
+    hooks.before( function() {
+        questionsQuiz = [
+            // Don't implement untested field such as questions, link and options
+            { indexBonneReponse: 1 },
+            { indexBonneReponse: 5 },
+            { indexBonneReponse: -6 },
+            { indexBonneReponse: 0 }
+        ]
 
-QUnit.module("Question Response Dynamic",
-    function() {
-        //validerQuestion
-        QUnit.test( "WHEN_questionIsWrong_THEN_validerQuestion_RETURNS_false", 
-            function( assert ) {
-                const noQuestion = 1;
-                const choixUtilisateur = 2;
-                var expectedResult = false;
-                assert.ok( validerQuestion(noQuestion, choixUtilisateur) == expectedResult)
-        });
 
-        //ajouterPoint
-        QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
-            function( assert ) {
-                totalPointage = 2;
-                var expectedScore = totalPointage + 1;
-                ajouterPoint()
-                assert.ok( expectedScore == totalPointage )
-        });
-        QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
-            function( assert ) {
-                totalPointage = 4;
-                var expectedScore = totalPointage + 1;
-                ajouterPoint()
-                assert.ok( expectedScore == totalPointage )
-        });
-        QUnit.test( "WHEN_pointScored_THEN_ajouterPoint_adds1", 
-            function( assert ) {
-                totalPointage = 0;
-                var expectedScore = totalPointage + 1;
-                ajouterPoint()
-                assert.ok( expectedScore == totalPointage )
-        });
+    });
 
-        //obtenirPoint
-        QUnit.test( "WHEN_prompted_THEN_obtenirPoint_RETURNS_totalPointage", 
-            function( assert ) {
-                totalPointage = 0;
-                var expectedPointage = 0;
-                assert.ok( obtenirPointage() == expectedPointage );
-        });
-});
+    QUnit.test( "obtenirBonneReponse()", function( assert )
+    {
+        var questionCourante, returnedValue;
 
-QUnit.module("Quiz Continuity Dynamic",
-    function() {
-        //estFinPartie
-        QUnit.test( "WHEN_gameOver_THEN_estFinPartie_RETURNS_true", 
-            function( assert ) {
-                questionCourante = MAX_QUESTIONS;
-                assert.ok( estFinPartie(questionCourante));
-        });
+        questionCourante = 0
+        returnedValue = obtenirBonneReponse(questionCourante);
+        assert.equal(returnedValue, 1, "WHEN_indexBonneReponseIs1_THEN_return1");
 
-        //chargerQuestionSuivante
-        QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
-            function( assert ) {
-                const EXPECTED_NUMBER = 1;
-                questionCourante = EXPECTED_NUMBER;
-                chargerQuestionSuivante()
-                assert.ok(questionCourante == EXPECTED_NUMBER + 1);
-        });
-        QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
-            function( assert ) {
-                const EXPECTED_NUMBER = 2;
-                questionCourante = EXPECTED_NUMBER;
-                chargerQuestionSuivante()
-                assert.ok(questionCourante == EXPECTED_NUMBER + 1);
-        });
-        QUnit.test( "WHEN_atQuestion1_THEN_chargerQuestionSuivante_RETURNS_question2", 
-            function( assert ) {
-                const EXPECTED_NUMBER = 3;
-                questionCourante = EXPECTED_NUMBER;
-                chargerQuestionSuivante()
-                assert.ok(questionCourante == EXPECTED_NUMBER + 1);
-        });
+        questionCourante = 1
+        returnedValue = obtenirBonneReponse(questionCourante);
+        assert.equal(returnedValue, 5, "WHEN_indexBonneReponseIs5_THEN_return5");
 
-        //obtenirBonneReponse
-        QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1", 
-            function( assert ) {
-                questionQuiz = [["Q1",1,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
-                var questionCourante = 0;
-                var correctAnswer = obtenirBonneReponse(questionCourante);
+        questionCourante = 2
+        returnedValue = obtenirBonneReponse(questionCourante);
+        assert.equal(returnedValue, -6, "WHEN_indexBonneReponseIs-6_THEN_return-6");
 
-                var EXPECTED_RESULT = 3;
-                assert.ok(correctAnswer == EXPECTED_RESULT);
-        });
-        QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_2", 
-            function( assert ) {
-                questionQuiz = [["Q1",2,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
-                var questionCourante = 0;
-                var correctAnswer = obtenirBonneReponse(questionCourante);
+        questionCourante = 3
+        returnedValue = obtenirBonneReponse(questionCourante);
+        assert.equal(returnedValue, 0, "WHEN_indexBonneReponseIs0_THEN_return0");
+    });
 
-                var EXPECTED_RESULT = 3;
-                assert.ok(correctAnswer == EXPECTED_RESULT);
-        });
-        QUnit.test( "WHEN_querried_THEN_obtenirBonneReponse_RETURNS_1_3", 
-            function( assert ) {
-                questionQuiz = [["Q1",3,"URL","Q1-C1","Q1-C2","Q1-C3","Q1-C3"]];
-                var questionCourante = 0;
-                var correctAnswer = obtenirBonneReponse(questionCourante);
+    QUnit.test( "validerQuestion()", function( assert )
+    {
+        var noQuestion, choixUtilisateur, returnedValue;
 
-                var EXPECTED_RESULT = 3;
-                assert.ok(correctAnswer == EXPECTED_RESULT);
-        });
+        noQuestion = 0;
+        choixUtilisateur = 2;
+        returnedValue = validerQuestion(noQuestion, choixUtilisateur)
+        assert.equal(returnedValue, false, "WHEN_choixUtilisateurIs2AndAnswerIndexIs1_THEN_returnFalse")
+
+        noQuestion = 1;
+        choixUtilisateur = 5;
+        returnedValue = validerQuestion(noQuestion, choixUtilisateur)
+        assert.equal(returnedValue, true, "WHEN_choixUtilisateurIs5AndAnswerIndexIs5_THEN_returnTrue")
+
+        noQuestion = 2;
+        choixUtilisateur = 2;
+        returnedValue = validerQuestion(noQuestion, choixUtilisateur)
+        assert.equal(returnedValue, false, "WHEN_choixUtilisateurIs2AndAnswerIndexIs-6_THEN_returnFalse")
+
+        noQuestion = 3;
+        choixUtilisateur = 0;
+        returnedValue = validerQuestion(noQuestion, choixUtilisateur)
+        assert.equal(returnedValue, true, "WHEN_choixUtilisateurIs0AndAnswerIndexIs0_THEN_returnTrue")
+    });
+
+    QUnit.test( "ajouterPoint()", function( assert )
+    {
+        totalPointage = 0;
+        ajouterPoint();
+        assert.equal(totalPointage, 1, "WHEN_totalPointageIs0_THEN_changeItTo1");
+
+        totalPointage = 2;
+        ajouterPoint();
+        assert.equal(totalPointage, 3, "WHEN_totalPointageIs2_THEN_changeItTo3");
+
+        totalPointage = 3;
+        ajouterPoint();
+        assert.equal(totalPointage, 4, "WHEN_totalPointageIs3_THEN_changeItTo4");
+
+        totalPointage = -4;
+        ajouterPoint();
+        assert.equal(totalPointage, -3, "WHEN_totalPointageIs-4_THEN_changeItTo-3");
+    });
+
+    QUnit.test( "obtenirPointage()", function( assert )
+    {
+        var returnedValue;
+
+        totalPointage = 0;
+        returnedValue = obtenirPointage();
+        assert.equal(returnedValue, 0, "WHEN_totalPointageIs0_THEN_return0");
+
+        totalPointage = 1;
+        returnedValue = obtenirPointage();
+        assert.equal(returnedValue, 1, "WHEN_totalPointageIs1_THEN_return1");
+
+        totalPointage = 2;
+        returnedValue = obtenirPointage();
+        assert.equal(returnedValue, 2, "WHEN_totalPointageIs2_THEN_return2");
+
+        totalPointage = -3;
+        returnedValue = obtenirPointage();
+        assert.equal(returnedValue, -3, "WHEN_totalPointageIs-3_THEN_return-3");
+    });
+
+    QUnit.test( "estFinPartie()", function(assert){
+        var returnedValue;
+
+        questionCourante = 0;
+        returnedValue = estFinPartie();
+        assert.equal(returnedValue, false," WHEN_questionCouranteIsLesserThanMAX_QUESTIONS_THEN_returnFalse");
+
+        questionCourante = MAX_QUESTIONS;
+        returnedValue = estFinPartie();
+        assert.equal(returnedValue, true," WHEN_questionCouranteEqualMAX_QUESTIONS_THEN_returnTrue");
+
+        questionCourante = MAX_QUESTIONS + 1;
+        returnedValue = estFinPartie();
+        assert.equal(returnedValue, true," WHEN_questionCouranteIsGreaterThanMAX_QUESTIONS_THEN_returnTrue");
+
+        questionCourante = -5;
+        returnedValue = estFinPartie();
+        assert.equal(returnedValue, false," WHEN_questionCouranteIsLesserThan0_THEN_returnFalse");
+    });
+
+    QUnit.test( "chargerQuestionSuivante()", function( assert )
+    {
+        questionCourante = 0;
+        chargerQuestionSuivante();
+        assert.equal(questionCourante, 1, "WHEN_questionCouranteIs0_THEN_changeItTo1");
+
+        questionCourante = 2;
+        chargerQuestionSuivante();
+        assert.equal(questionCourante, 3, "WHEN_questionCouranteIs2_THEN_changeItTo3");
+
+        questionCourante = 3;
+        chargerQuestionSuivante();
+        assert.equal(questionCourante, 4, "WHEN_questionCouranteIs3_THEN_changeItTo4");
+
+        questionCourante = -4;
+        chargerQuestionSuivante();
+        assert.equal(questionCourante, -3, "WHEN_questionCouranteIs-4_THEN_changeItTo-3");
+    });
+
+    QUnit.todo("obtenirChoix()", function(){
+
+    });
+    QUnit.todo("afficherBonneReponse()", function(){
+
+    });
 });
 
 QUnit.module("User Interface Update",
     function() {
-        //obtenirChoix
         //afficherBonneReponse
         //majPointage
         QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1", 

@@ -6,6 +6,17 @@
  */
 
 /**
+ * @name obtenirBonneReponse
+ * @description Return l'index de la bonne réponse.
+ * @param {*} noQuestion L'index de la question
+ * @returns retourne l'index de la bonne réponse
+ */
+function obtenirBonneReponse(noQuestion)
+{
+	return questionsQuiz[noQuestion]["indexBonneReponse"];
+}
+
+/**
  * @name validerQuestion
  * @description Valide si la réponse choisie est la bonne.
  * @param {*} noQuestion numéro de la question
@@ -14,8 +25,7 @@
  */
 function validerQuestion(noQuestion, choixUtilisateur)
 {
-	const INDEX_BONNE_REPONSE = 1;
-	return (choixUtilisateur == questionsQuiz[noQuestion][INDEX_BONNE_REPONSE]);
+	return (choixUtilisateur == obtenirBonneReponse(noQuestion));
 }
 
 /**
@@ -45,7 +55,7 @@ function obtenirPointage()
  */
 function estFinPartie()
 {
-	return (questionCourante == MAX_QUESTIONS);
+	return (questionCourante >= MAX_QUESTIONS);
 }
 
 /**
@@ -58,17 +68,6 @@ function chargerQuestionSuivante()
 }
 
 /**
- * @name obtenirBonneReponse
- * @description Incrémente l'index indiquant la question courante.
- * @param {*} noQuestion L'index de la question
- * @returns retourne la bonne réponse
- */
-function obtenirBonneReponse(noQuestion)
-{
-	return questionsQuiz[noQuestion][POS_REPONSE];
-}
-
-/**
  * @name obtenirChoix
  * @description Obtiens les choix de réponse pour une question donnée.
  * @param {*} noQuestion Index de la question pour laquelle il faut obtenir les choix de réponse.
@@ -78,9 +77,8 @@ function obtenirChoix(noQuestion)
 {
 	var choix = [];
 	for (let i = 0; i < NB_CHOIX_MAX; i++) {
-		choix[i] = questionsQuiz[noQuestion][i + 3];
+		choix[i] = questionsQuiz[noQuestion]["choixReponse"][i];
 	}
-
 	return choix;
 }
 
@@ -91,8 +89,9 @@ function obtenirChoix(noQuestion)
  */
 function afficherBonneReponse(noQuestion) {
 	$('#modalReponse').modal("show");
-	document.getElementById("texteReponse").textContent = questionsQuiz[noQuestion][obtenirBonneReponse(noQuestion) + 3];
-	document.getElementById("lienPlusInfos").href = questionsQuiz[noQuestion][1];
+	var indexBonneReponse = obtenirBonneReponse(noQuestion);
+	document.getElementById("texteReponse").textContent = questionsQuiz[noQuestion]["choixReponse"][indexBonneReponse];
+	document.getElementById("lienPlusInfos").href = questionsQuiz[noQuestion]["lienReponse"];
 }
 
 /**
@@ -134,7 +133,7 @@ function majTexteChoix(noQuestion)
  */
 function majTexteQuestion(noQuestion)
 {
-	document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion][0];
+	document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion]["question"];
 }
 
 /**
@@ -160,10 +159,10 @@ function remiseAZeroBoutons() {
  */
 function majProgression()
 {
-	let avancement = ( questionCourante / MAX_QUESTIONS ) * 100;
+	var avancementPourcentage = `${questionCourante/MAX_QUESTIONS * 100}%`;
 	var barre = document.getElementById("barreProgression");
 
-	barre.style.width = avancement+"%";
+	barre.style.width = avancementPourcentage;
 }
 
 /**

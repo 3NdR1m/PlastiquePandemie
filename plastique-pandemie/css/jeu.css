@@ -11,13 +11,8 @@ body{
 	margin-bottom: 20px;
 }
 .btn-secondary {
-<<<<<<< HEAD
 	background-color: rgb(131, 177, 192);
 	color: whitesmoke;
-=======
-	background-color: lightblue;
-	color: rgb(0, 0, 0);
->>>>>>> 29a462286887aaec73178caf16f1d1074c6b004c
 }
 .btn-secondary:not(:disabled):not(.disabled).active {
 	background-color: cadetblue;
