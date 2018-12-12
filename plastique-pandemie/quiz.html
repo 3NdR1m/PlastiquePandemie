@@ -55,7 +55,7 @@
 		<hr>
 		<div id="greetingBox" class="text-center">
 			<p class="lead">
-				Bienvenue au jeu questionnaire La Vérité sur la Santé - Plastique Pandémie!
+				Bienvenue au jeu questionnaire de Plastique Pandémie!
 			</p>
 			<p>
 				Préparez-vous à débuter.
@@ -78,22 +78,22 @@
 			<form id="formQuiz" class="container" name="formQuiz" method="GET">
 				<fieldset>
 					<legend class="text-sm-left"><span id="texteQuestion">Question</span></legend>
-					<div class="btn-group-toggle row" data-toggle="buttons" class="text-center">
+					<div class="btn-group-toggle row text-center" data-toggle="buttons">
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix0" autocomplete="off" value="0">
-							<p>Option 1</p>
+							<input type="radio" name="options" id="btnChoix0" value="0">
+							<span>Option 1</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix1" autocomplete="off" value="1">
-							<p>Option 2</p>
+							<input type="radio" name="options" id="btnChoix1" value="1">
+							<span>Option 2</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix2" autocomplete="off" value="2">
-							<p>Option 3</p>
+							<input type="radio" name="options" id="btnChoix2" value="2">
+							<span>Option 3</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix3" autocomplete="off" value="3">
-							<p>Option 4</p>
+							<input type="radio" name="options" id="btnChoix3" value="3">
+							<span>Option 4</span>
 						</label>
 					</div>
 				</fieldset>
@@ -138,17 +138,14 @@
 		<source src="audio/echec.mp3" type="audio/mpeg" />
 		Votre navigateur ne supporte pas les éléments audio.
 	</audio>
-	<audio id="introAudio" preload="auto">
-		<source src="audio/intro.mp3" type="audio/mpeg" />
-		Votre navigateur ne supporte pas les éléments audio.
-	</audio>
 
 	<!-- SCRIPT -->
 	<script>
+		init();
 		document.getElementById("btnStart").onclick = function(){
 			majInterface();
-			document.getElementById("questionBox").className = "";
-			document.getElementById("greetingBox").className = "d-none";
+			document.getElementById("questionBox").classList.remove("d-none");
+			document.getElementById("greetingBox").classList.add("d-none");
 		}
 		// Selection Option
 		document.getElementById("formQuiz").onchange = function () {

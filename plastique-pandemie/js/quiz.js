@@ -8,8 +8,8 @@
 /**
  * @name obtenirBonneReponse
  * @description Return l'index de la bonne réponse.
- * @param {*} noQuestion L'index de la question
- * @returns retourne l'index de la bonne réponse
+ * @param {Number} noQuestion L'index de la question
+ * @returns {Number} retourne l'index de la bonne réponse
  */
 function obtenirBonneReponse(noQuestion)
 {
@@ -19,9 +19,9 @@ function obtenirBonneReponse(noQuestion)
 /**
  * @name validerQuestion
  * @description Valide si la réponse choisie est la bonne.
- * @param {*} noQuestion numéro de la question
- * @param {*} choixUtilisateur choix fait par l'utilisateur
- * @returns true si la réponse choisie est bonne, sinon false
+ * @param {Number} noQuestion numéro de la question
+ * @param {Number} choixUtilisateur choix fait par l'utilisateur
+ * @returns {Boolean} true si la réponse choisie est bonne, sinon false
  */
 function validerQuestion(noQuestion, choixUtilisateur)
 {
@@ -40,7 +40,7 @@ function ajouterPoint()
 /**
  * @name obtenirPointage
  * @description Obtiens le pointage total accumulé.
- * @returns Le pointage total
+ * @returns {Number} Le pointage total
  */
 function obtenirPointage()
 {
@@ -50,8 +50,7 @@ function obtenirPointage()
 /**
  * @name estFinPartie
  * @description Vérifie si l'on a atteint la fin de la partie.
- * @param {*} questionCourante Index de la question courante
- * @returns true si l'index de la question courrante est égal au nombre maximum de questions, sinon faux
+ * @returns {boolean} true si l'index de la question courrante est égal au nombre maximum de questions, sinon faux
  */
 function estFinPartie()
 {
@@ -70,7 +69,7 @@ function chargerQuestionSuivante()
 /**
  * @name obtenirChoix
  * @description Obtiens les choix de réponse pour une question donnée.
- * @param {*} noQuestion Index de la question pour laquelle il faut obtenir les choix de réponse.
+ * @param {Number} noQuestion Index de la question pour laquelle il faut obtenir les choix de réponse.
  * @returns retourne un tableau contenant les choix de la question
  */
 function obtenirChoix(noQuestion)
@@ -85,7 +84,7 @@ function obtenirChoix(noQuestion)
 /**
  * @name afficherBonneReponse
  * @description Modifie la fenêtre modale pour afficher la bonne réponse pour une question donnée.
- * @param {*} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
+ * @param {Number} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
 function afficherBonneReponse(noQuestion) {
 	$('#modalReponse').modal("show");
@@ -115,7 +114,7 @@ function majTotalQuestion()
 /**
  * @name majTexteChoix
  * @description Modifie l'interface en affichant les réponses dans des boutons pour une question donnée.
- * @param {*} noQuestion Index de la question pour laquelle il faut afficher les réponses.
+ * @param {Number} noQuestion Index de la question pour laquelle il faut afficher les réponses.
  */
 function majTexteChoix(noQuestion)
 {
@@ -129,7 +128,7 @@ function majTexteChoix(noQuestion)
 /**
  * @name majTexteQuestion
  * @description Modifie l'interface en affichant une question.
- * @param {*} noQuestion Index de la question qu'il faut afficher.
+ * @param {Number} noQuestion Index de la question qu'il faut afficher.
  */
 function majTexteQuestion(noQuestion)
 {
@@ -159,9 +158,9 @@ function remiseAZeroBoutons() {
  */
 function majProgression()
 {
-	var avancementPourcentage = `${questionCourante/MAX_QUESTIONS * 100}%`;
-	var barre = document.getElementById("barreProgression");
-
+	var avancementPourcentage, barre;
+	avancementPourcentage = `${questionCourante/MAX_QUESTIONS * 100}%`;
+	barre = document.getElementById("barreProgression");
 	barre.style.width = avancementPourcentage;
 }
 
@@ -171,9 +170,8 @@ function majProgression()
  */
 function majInterface()
 {
-	var n = questionCourante;
-	majTexteChoix(n);
-	majTexteQuestion(n);
+	majTexteChoix(questionCourante);
+	majTexteQuestion(questionCourante);
 	majNoQuestionCourant();
 	majPointage();
 	majProgression();
@@ -184,7 +182,7 @@ function majInterface()
 /**
  * @name selectionnerChoix
  * @description Modifie l'interface pour changer l'apparence du bouton cliqué et activer le bouton Valider.
- * @param {*} noChoix Numéro du choix de réponse sélectionné.
+ * @param {Number} noChoix Numéro du choix de réponse sélectionné.
  */
 function selectionnerChoix(noChoix)
 {

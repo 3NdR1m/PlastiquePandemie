@@ -7,15 +7,17 @@
 
 /**
  * @const MAX_QUESTIONS
- * @type {number}
+ * @type {Number}
  * @description Nombre de questions à afficher dans le quiz.
+ * @constant
  */
 const MAX_QUESTIONS = 5;
 
 /**
  * @const NB_CHOIX_MAX
- * @type {number}
+ * @type {Number}
  * @description Nombre de choix par question.
+ * @constant
  */
 const NB_CHOIX_MAX = 4;
 
@@ -53,68 +55,88 @@ var reponseUtilisateur = 0;
 /**
  * @global
  * @name tableauQuestions
- * @type {object}
+ * @type {Array<Object>}
  * @description Liste des questions disponibles pour le quiz.
- * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
+ * @example [{
+ * 	Question:"Que vaus 1 + 1",
+ * 	lienReponse:"index.html",
+ * 	indexBonneReponse: 0,
+ * 	choixReponse: [ "2", "0", "4", "-1" ]
+ * }]
  */
 const tableauQuestions = [
-  { question: "Que signifie l'acronyme 'POP'?",
-    lienReponse: "https://fr.wikipedia.org/wiki/Polluant_organique_persistant",
-    indexBonneReponse: 0,
-    choixReponse: ["Polluants Organiques Persistants", "Projets Ocean Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique" ]
-  },
-  { question: "Combien de tonnes de plastique son jetée à l'océan à chaque seconde?",
-    lienReponse: "problematique.html",
-    indexBonneReponse: 2,
-    choixReponse: ["1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"]
-  },
-  { question: "Lequelle de ces nom ne désigne pas un océan?",
-    lienReponse: "https://fr.wikipedia.org/wiki/Cara%C3%AFbes",
-    indexBonneReponse: 3,
-    choixReponse: ["Pacifique", "Artique", "Indien", "Caraïbe"]
-  },
-  { question: "Combien de décharge océaniques sont connues à ce jour?",
-    lienReponse: "etudes-et-articles-scientifiques-pollution-ocean.html",
-    indexBonneReponse: 3,
-    choixReponse: ["3", "7", "6", "5"]
-  },
-  { question: "Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?",
-    lienReponse: "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/",
-    indexBonneReponse: 3,
-    choixReponse: ["Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"]
-  },
-  { question: "Pourquoi la cellulose est-elle non-poluante, malgré être un polymer?",
-    lienReponse: "https://en.wikipedia.org/wiki/Cellulose",
-    indexBonneReponse: 0,
-    choixReponse: [ "Fait a base d'oxygene", "Fait a base de nitrogene", "Fait a base de carbonne", "Fait a base de sodium"]
-  },
-  { question: "La Bioaccumulation de plastique est le procédé dans le quel...",
-    lienReponse: "https://www.nature.com/articles/srep03263",
-    indexBonneReponse: 1,
-    choixReponse: [ "Le plastique est digeré", "Le plastique grimpe la chaine alimentaire", "Le plastique est retourné à la nature", "Le plastique infecte l'environement"]
-  },
-  { question: "En 2017, combien d'argent fut investis globalement dans des sources d'énergies renouvelables?",
-    lienReponse: "https://europa.eu/capacity4dev/file/71900/download?token=57xpTJ4W",
-    indexBonneReponse: 2,
-    choixReponse: [ "275 Millions", "275 Trillions", "275 Billions", "275 Milliards"]
-  },
-  { question: "Dans le but de créer des bioréacteurs plus éfficaces, certaines recherchistes proposent...",
-    lienReponse: "https://pp.bme.hu/ch/article/download/11096/7968/",
-    indexBonneReponse: 2,
-    choixReponse: [ "Des catalysts plus violants", "La domestication d'algues", "Des biorécateurs industrielles", "Des bioréacteurs locaux"]
-  },
-  { question: "Parmi ces réponses, lequel n'éxiste pas?",
-    lienReponse: "https://www.theguardian.com/environment/2018/apr/16/scientists-accidentally-create-mutant-enzyme-that-eats-plastic-bottles",
-    indexBonneReponse: 3,
-    choixReponse: [ "Bactérie plastivore", "Verre de terre plastivore", "Champignon plastivore", "Algue plastivore"]
-  }
-]
+	{
+		question: "Que signifie l’acronyme « POP »?",
+		lienReponse: "https://fr.wikipedia.org/wiki/Polluant_organique_persistant",
+		indexBonneReponse: 0,
+		choixReponse: ["Polluants Organiques Persistants", "Projets Oceans Propres", "Pomme, Oeuf, Patate", "Propriété Obfusqués du Pacifique"]
+	},
+	{
+		question: "Combien de tonnes de plastique sont jetées à l’océan à chaque seconde?",
+		lienReponse: "problematique.html",
+		indexBonneReponse: 2,
+		choixReponse: ["1 Tonnes", "10 Tonnes", "0,5 Tonnes", "14 Tonnes"]
+	},
+	{
+		question: "Lequel de ces noms ne désigne pas un océan?",
+		lienReponse: "https://fr.wikipedia.org/wiki/Cara%C3%AFbes",
+		indexBonneReponse: 3,
+		choixReponse: ["Pacifique", "Atlantique", "Indien", "Caraïbe"]
+	},
+	{
+		question: "Combien de décharges océaniques sont connues à ce jour?",
+		lienReponse: "etudes-et-articles-scientifiques-pollution-ocean.html",
+		indexBonneReponse: 3,
+		choixReponse: ["3", "7", "6", "5"]
+	},
+	{
+		question: "Depuis quelle décennie le plastique est-il massivement utilisé?",
+		lienReponse: "index.html",
+		indexBonneReponse: 1,
+		choixReponse: ["1930", "1940", "1950", "1960"]
+	},
+	{
+		question: "Combien a-t-il d’océans sur terre?",
+		lienReponse: "https://fr.wikipedia.org/wiki/Oc%C3%A9an",
+		indexBonneReponse: 3,
+		choixReponse: ["7", "6", "4", "5"]
+	},
+	{
+		question: "Parmi ces organismes plastivores, lesquels n’existent pas encore?",
+		lienReponse: "https://www.theguardian.com/environment/2018/apr/16/scientists-accidentally-create-mutant-enzyme-that-eats-plastic-bottles",
+		indexBonneReponse: 3,
+		choixReponse: ["Les bactéries plastivores", "Les vers de terre plastivores", "Les champignons plastivores", "les algues plastivores"]
+	},
+	{
+		question: "Qu'est-ce qu'un plastique Biodégradable omet d'utiliser?",
+		lienReponse: "http://www.pepctplastics.com/resources/connecticut-plastics-learning-center/biodegradable-plastics/",
+		indexBonneReponse: 3,
+		choixReponse: ["Un Plastifiant", "Un Polymer", "De l'Antioxidant", "Du Carbonne"]
+	},
+	{
+		question: "Pourquoi la cellulose est-elle non-poluante, malgré être un polymer?",
+		lienReponse: "https://en.wikipedia.org/wiki/Cellulose",
+		indexBonneReponse: 0,
+		choixReponse: ["Fait a base d'oxygene", "Fait a base de nitrogene", "Fait a base de carbonne", "Fait a base de sodium"]
+	},
+	{
+		question: "Dans le but de créer des bioréacteurs plus éfficaces, certaines recherchistes proposent...",
+		lienReponse: "https://pp.bme.hu/ch/article/download/11096/7968/",
+		indexBonneReponse: 2,
+		choixReponse: ["Des catalysts plus violants", "La domestication d'algues", "Des biorécateurs industrielles", "Des bioréacteurs locaux"]
+	}
+];
 /**
  * @global
  * @name questionsQuiz
- * @type {object}
+ * @type {Array<Object>}
  * @description Liste des questions posées dans le quiz.
- * @example [["Quel est le meilleur aliment pour votre santé?", 1, "https://www.google.ca" ,"Brocoli","Croustilles sans OGM","Crème glacée","Poutine déjeuner"]]
+ * @example [{
+ * 	Question:"Que vaus 1 + 1",
+ * 	lienReponse:"index.html",
+ * 	indexBonneReponse: 0,
+ * 	choixReponse: [ "2", "0", "4", "-1" ]
+ * }]
  */
 var questionsQuiz = [];
 
@@ -123,16 +145,16 @@ var questionsQuiz = [];
  * @description Prend MAX_QUESTIONS de questions de tableauQuestions pour les mettre dans questionsQuiz.
  */
 function choisirQuestions() {
-  let questionList = [];
-  for (let i = 0; i < MAX_QUESTIONS; i++) {
-    let index;
-    do {
-      index = Math.floor(Math.random() * tableauQuestions.length);
-    }
-    while (questionList.includes(index))
-    questionList[i] = index;
-    questionsQuiz[i] = tableauQuestions[index];
-  }
+	let questionIndexList = [];
+	for (let i = 0; i < MAX_QUESTIONS; i++) {
+		let index;
+		do {
+			index = Math.floor(Math.random() * tableauQuestions.length);
+		}
+		while (questionIndexList.includes(index))
+		questionIndexList[i] = index;
+		questionsQuiz[i] = tableauQuestions[index];
+	}
 }
 
 /**
@@ -140,11 +162,9 @@ function choisirQuestions() {
  * @description Fonction d'initialisation du quiz.
  */
 function init() {
-  reponseUtilisateur = 0;
-  questionCourante = 0;
-  totalPointage = 0;
-  choisirQuestions();
-  $(".totalQuestions").text(MAX_QUESTIONS);
+	reponseUtilisateur = 0;
+	questionCourante = 0;
+	totalPointage = 0;
+	choisirQuestions();
+	$(".totalQuestions").text(MAX_QUESTIONS);
 }
-
-window.onload = init;

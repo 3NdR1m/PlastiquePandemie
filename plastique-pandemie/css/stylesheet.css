@@ -1,6 +1,9 @@
 /* Met l'image de fond */
 body {
-    background: url('../images/background.jpg') no-repeat fixed center;
+    background: url('../images/background.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 

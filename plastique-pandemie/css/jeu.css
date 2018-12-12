@@ -1,6 +1,10 @@
+/* Met l'image de fond */
 body{
-	background: url('../images/background-quiz.jpg') no-repeat fixed center;
-	background-size: cover;
+	background: url('../images/background-quiz.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #barreProgression {
@@ -17,19 +21,19 @@ body{
 .btn-secondary:not(:disabled):not(.disabled).active {
 	background-color: cadetblue;
 }
-
-label>p{
-	margin: 8px;
-}
-
 label{
 	margin: 2px;
 }
 body > *, .modal-content{
-	background-image: linear-gradient(#5a7288, #345172);
+	background-image: linear-gradient(#3b546b, #345172);
     color: white;
 }
 
 .modal-content>*{
 	background-color: transparent;
+}
+
+label>span{
+	margin: 8px;
+	display: block;
 }
