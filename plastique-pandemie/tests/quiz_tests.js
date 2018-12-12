@@ -11,7 +11,7 @@ QUnit.module.todo("init.js", function()
 });
 QUnit.module("quiz.js", function( hooks )
 {
-    // Do before all; declare tested objects
+    // Do before all tests; declare tested objects
     hooks.before( function() {
         questionsQuiz = [
             // Don't implement untested field such as questions, link and options
