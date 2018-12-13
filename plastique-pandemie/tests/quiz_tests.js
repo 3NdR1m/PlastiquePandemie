@@ -1,3 +1,10 @@
+questionsQuiz = [
+    // Don't implement untested field such as questions, link and options
+    { indexBonneReponse: 1 },
+    { indexBonneReponse: 5 },
+    { indexBonneReponse: -6 },
+    { indexBonneReponse: 0 }
+]
 QUnit.module.todo("init.js", function()
 {
     
@@ -33,10 +40,20 @@ QUnit.module("quiz.js", function( hooks )
             }
         ]
         totalPointage = 0;
+        noQuestion = 0;
 
         var hookTotalPoints = document.createElement("p");
         hookTotalPoints.setAttribute("id", "totalPoints");
         document.body.appendChild(hookTotalPoints);
+
+        var hookTotalQuestions = document.createElement("p");
+        hookTotalQuestions.setAttribute("id", "totalQuestions");
+        document.body.appendChild(hookTotalQuestions);
+
+        document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion]["question"];
+        var hookTexteQuestions = document.createElement("p");
+        hookTexteQuestions.setAttribute("id", "totalQuestions");
+        document.body.appendChild(hookTexteQuestions);
     });
 
     QUnit.test( "obtenirBonneReponse()", function( assert )
@@ -192,36 +209,38 @@ QUnit.module("quiz.js", function( hooks )
     });
 
     QUnit.test("majPointage()", function ( assert )
-    {
-        var totalPointage, check
+    {   var check;
 
         totalPointage = 2;
         majPointage();
         check = document.getElementById("totalPoints").textContent;
-        assert.equal(check, totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1");
+        assert.equal(check, 2, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1");
 
         totalPointage = 3;
         majPointage();
-        var check = document.getElementById("totalPoints").textContent;
-        assert.equal(check, totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_2");
+        check = document.getElementById("totalPoints").textContent;
+        assert.equal(check, 3, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_2");
 
         totalPointage = 0;
         majPointage();
-        var check = document.getElementById("totalPoints").textContent;
-        assert.equal(check, totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3");
+        check = document.getElementById("totalPoints").textContent;
+        assert.equal(check, 0, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3");
     });
 
-    //majTotalQuestion
-    QUnit.todo( "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage", 
-        function( assert ) {
+    QUnit.test("majTotalQuestion", function( assert ) {
             majTotalQuestion();
             var check = document.getElementById("totalQuestions").textContent;
-            assert.ok(check==MAX_QUESTIONS);
+            assert.ok(check==MAX_QUESTIONS, "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage");
     });
 
     //majTexteChoix
-    //majPointage
+
     //majTexteQuestion
+    QUnit.test("majTotalQuestion", function( assert ) {
+        majTexteQuestion(0);
+        var check = document.getElementById("texteQuestion").innerText
+        assert.equal(check, "sampleQuestion0")
+    });
     //majNoQuestionCourant
     //remiseAZeroBoutons
     //majProgression
