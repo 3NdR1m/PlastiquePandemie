@@ -14,33 +14,55 @@ QUnit.module("quiz.js", function( hooks )
     // Do before all tests; declare tested objects
     hooks.before( function() {
         questionsQuiz = [
-            // Don't implement untested field such as questions, link and options
-            { indexBonneReponse: 1 },
-            { indexBonneReponse: 5 },
-            { indexBonneReponse: -6 },
-            { indexBonneReponse: 0 }
+            {
+                question: "sampleQuestion0",
+                lienReponse: "link1",
+                indexBonneReponse: 1,
+                choixReponse: ["a", "b", "c", "d"]
+            },
+            {
+                question: "sampleQuestion1",
+                lienReponse: "link1",
+                indexBonneReponse: 3,
+                choixReponse: ["e", "f", "g", "h"]
+            },
+            {
+                question: "sampleQuestion2",
+                lienReponse: "link2",
+                indexBonneReponse: -6,
+                choixReponse: ["i", "j", "k", "l"]
+            },
+            {
+                question: "sampleQuestion3",
+                lienReponse: "link3",
+                indexBonneReponse: 0,
+                choixReponse: ["m", "n", "o", "p"]
+            }
         ]
+        totalPointage = 0;
 
-
+        var hookTotalPoints = document.createElement("p");
+        hookTotalPoints.setAttribute("id", "totalPoints");
+        document.appendChild(hookTotalPoints);
     });
 
     QUnit.test( "obtenirBonneReponse()", function( assert )
     {
         var questionCourante, returnedValue;
 
-        questionCourante = 0
+        questionCourante = 0;
         returnedValue = obtenirBonneReponse(questionCourante);
         assert.equal(returnedValue, 1, "WHEN_indexBonneReponseIs1_THEN_return1");
 
-        questionCourante = 1
+        questionCourante = 1;
         returnedValue = obtenirBonneReponse(questionCourante);
-        assert.equal(returnedValue, 5, "WHEN_indexBonneReponseIs5_THEN_return5");
+        assert.equal(returnedValue, 3, "WHEN_indexBonneReponseIs5_THEN_return5");
 
-        questionCourante = 2
+        questionCourante = 2;
         returnedValue = obtenirBonneReponse(questionCourante);
         assert.equal(returnedValue, -6, "WHEN_indexBonneReponseIs-6_THEN_return-6");
 
-        questionCourante = 3
+        questionCourante = 3;
         returnedValue = obtenirBonneReponse(questionCourante);
         assert.equal(returnedValue, 0, "WHEN_indexBonneReponseIs0_THEN_return0");
     });
@@ -55,7 +77,7 @@ QUnit.module("quiz.js", function( hooks )
         assert.equal(returnedValue, false, "WHEN_choixUtilisateurIs2AndAnswerIndexIs1_THEN_returnFalse")
 
         noQuestion = 1;
-        choixUtilisateur = 5;
+        choixUtilisateur = 3;
         returnedValue = validerQuestion(noQuestion, choixUtilisateur)
         assert.equal(returnedValue, true, "WHEN_choixUtilisateurIs5AndAnswerIndexIs5_THEN_returnTrue")
 
@@ -110,7 +132,8 @@ QUnit.module("quiz.js", function( hooks )
         assert.equal(returnedValue, -3, "WHEN_totalPointageIs-3_THEN_return-3");
     });
 
-    QUnit.test( "estFinPartie()", function(assert){
+    QUnit.test( "estFinPartie()", function(assert)
+    {
         var returnedValue;
 
         questionCourante = 0;
@@ -149,54 +172,66 @@ QUnit.module("quiz.js", function( hooks )
         assert.equal(questionCourante, -3, "WHEN_questionCouranteIs-4_THEN_changeItTo-3");
     });
 
-    QUnit.todo("obtenirChoix()", function(){
+    QUnit.test("obtenirChoix()", function( assert )
+    {   var noQuestion, returnedValue;
+
+        noQuestion = 0;
+        returnedValue = obtenirChoix(noQuestion);
+        assert.deepEqual(returnedValue, ["a", "b", "c", "d"], "WHEN_obtenirChoixRecieves0_THEN_outputsQuestion0AnswerArray");
+
+        noQuestion = 1;
+        returnedValue = obtenirChoix(noQuestion);
+        assert.deepEqual(returnedValue, ["e", "f", "g", "h"], "WHEN_obtenirChoixRecieves1_THEN_outputsQuestion1AnswerArray");
+
+        noQuestion = 2;
+        returnedValue = obtenirChoix(noQuestion);
+        assert.deepEqual(returnedValue, ["i", "j", "k", "l"], "WHEN_obtenirChoixRecieves2_THEN_outputsQuestion2AnswerArray");
+
+        noQuestion = 3;
+        returnedValue = obtenirChoix(noQuestion);
+        assert.deepEqual(returnedValue, ["m", "n", "o", "p"], "WHEN_obtenirChoixRecieves3_THEN_outputsQuestion3AnswerArray");
 
     });
-    QUnit.todo("afficherBonneReponse()", function(){
 
+    QUnit.todo("afficherBonneReponse()", function( assert )
+    {   
+        
     });
-});
 
-QUnit.module("User Interface Update",
-    function() {
-        //afficherBonneReponse
-        //majPointage
-        QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1", 
-            function( assert ) {
-                totalPointage = 2;
-                majPointage();
-                var check = document.getElementById("totalPoints").textContent;
-                assert.ok(check==totalPointage);
-        });
-        QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_2", 
-            function( assert ) {
-                totalPointage = 3;
-                majPointage();
-                var check = document.getElementById("totalPoints").textContent;
-                assert.ok(check==totalPointage);
-        });
-        QUnit.test( "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3", 
-            function( assert ) {
-                totalPointage = 0;
-                majPointage();
-                var check = document.getElementById("totalPoints").textContent;
-                assert.ok(check==totalPointage);
-        });
+    QUnit.test("majPointage()", function ( assert )
+    {   var totalPointage, check
 
-        //majTotalQuestion
-        QUnit.test( "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage", 
-            function( assert ) {
-                majTotalQuestion();
-                var check = document.getElementById("totalQuestions").textContent;
-                assert.ok(check==MAX_QUESTIONS);
-        });
+        totalPointage = 2;
+        majPointage();
+        check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_1");
 
-        //majTexteChoix
-        //majTexteQuestion
-        //majNoQuestionCourant
-        //remiseAZeroBoutons
-        //majProgression
-        //majInterface
-        //selectionnerChoix
-        //afficherBoiteFinDeJeu
+        totalPointage = 3;
+        majPointage();
+        var check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_2");
+
+        totalPointage = 0;
+        majPointage();
+        var check = document.getElementById("totalPoints").textContent;
+        assert.ok(check==totalPointage, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3");
+    });
+
+    //majTotalQuestion
+    QUnit.todo( "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage", 
+        function( assert ) {
+            majTotalQuestion();
+            var check = document.getElementById("totalQuestions").textContent;
+            assert.ok(check==MAX_QUESTIONS);
+    });
+
+    //majTexteChoix
+    //majPointage
+    //majTexteQuestion
+    //majNoQuestionCourant
+    //remiseAZeroBoutons
+    //majProgression
+    //majInterface
+    //selectionnerChoix
+    //afficherBoiteFinDeJeu
 });
