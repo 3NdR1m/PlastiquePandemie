@@ -38,9 +38,8 @@ QUnit.module("quiz.js", function( hooks )
         hookTotalQuestions.setAttribute("id", "totalQuestions");
         document.body.appendChild(hookTotalQuestions);
 
-        document.getElementById("texteQuestion").innerText = questionsQuiz[noQuestion]["question"];
         var hookTexteQuestions = document.createElement("p");
-        hookTexteQuestions.setAttribute("id", "totalQuestions");
+        hookTexteQuestions.setAttribute("id", "texteQuestions");
         document.body.appendChild(hookTexteQuestions);
     });
 
@@ -216,11 +215,27 @@ QUnit.module("quiz.js", function( hooks )
             assert.ok(check==MAX_QUESTIONS, "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage");
     });
 
-    QUnit.test("majTotalQuestion", function( assert )
+    QUnit.test("majTexteQuestion", function( assert )
     {
-        majTexteQuestion(0);
-        var check = document.getElementById("texteQuestion").innerText
-        assert.equal(check, "sampleQuestion0")
+        noQuestion = 0;
+        majTexteQuestion(noQuestion);
+        var check = questionsQuiz[noQuestion]["question"]
+        assert.equal(check, "sampleQuestion0");
+
+        noQuestion = 1;
+        majTexteQuestion(noQuestion);
+        var check = questionsQuiz[noQuestion]["question"]
+        assert.equal(check, "sampleQuestion1");
+
+        noQuestion = 2;
+        majTexteQuestion(noQuestion);
+        var check = questionsQuiz[noQuestion]["question"]
+        assert.equal(check, "sampleQuestion2");
+
+        noQuestion = 3;
+        majTexteQuestion(noQuestion);
+        var check = questionsQuiz[noQuestion]["question"]
+        assert.equal(check, "sampleQuestion3");
     });
 
     QUnit.todo("majTexteChoix()", function( assert )
