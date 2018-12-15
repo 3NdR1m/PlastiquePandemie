@@ -1,17 +1,5 @@
-questionsQuiz = [
-    // Don't implement untested field such as questions, link and options
-    { indexBonneReponse: 1 },
-    { indexBonneReponse: 5 },
-    { indexBonneReponse: -6 },
-    { indexBonneReponse: 0 }
-]
-QUnit.module.todo("init.js", function()
-{
-    
-});
 QUnit.module("quiz.js", function( hooks )
-{
-    // Do before all tests; declare tested objects
+{   // Do before all tests; declare tested objects
     hooks.before( function() {
         questionsQuiz = [
             {
@@ -57,8 +45,7 @@ QUnit.module("quiz.js", function( hooks )
     });
 
     QUnit.test( "obtenirBonneReponse()", function( assert )
-    {
-        var questionCourante, returnedValue;
+    {   var questionCourante, returnedValue;
 
         questionCourante = 0;
         returnedValue = obtenirBonneReponse(questionCourante);
@@ -203,11 +190,6 @@ QUnit.module("quiz.js", function( hooks )
 
     });
 
-    QUnit.todo("afficherBonneReponse()", function( assert )
-    {   
-        
-    });
-
     QUnit.test("majPointage()", function ( assert )
     {   var check;
 
@@ -227,24 +209,57 @@ QUnit.module("quiz.js", function( hooks )
         assert.equal(check, 0, "WHEN_prompted_THEN_majPointage_RETURNS_totalPointage_3");
     });
 
-    QUnit.test("majTotalQuestion", function( assert ) {
+    QUnit.test("majTotalQuestion", function( assert ) 
+    {
             majTotalQuestion();
             var check = document.getElementById("totalQuestions").textContent;
             assert.ok(check==MAX_QUESTIONS, "WHEN_prompted_THEN_majTotalQuestion_RETURNS_totalPointage");
     });
 
-    //majTexteChoix
-
-    //majTexteQuestion
-    QUnit.test("majTotalQuestion", function( assert ) {
+    QUnit.test("majTotalQuestion", function( assert )
+    {
         majTexteQuestion(0);
         var check = document.getElementById("texteQuestion").innerText
         assert.equal(check, "sampleQuestion0")
     });
-    //majNoQuestionCourant
-    //remiseAZeroBoutons
-    //majProgression
-    //majInterface
-    //selectionnerChoix
-    //afficherBoiteFinDeJeu
+
+    QUnit.todo("majTexteChoix()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("afficherBonneReponse()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("majNoQuestionCourant()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("remiseAZeroBoutons()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("majProgression()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("majInterface()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("selectionnerChoix()", function( assert )
+    {   
+        
+    });
+
+    QUnit.todo("afficherBoiteFinDeJeu()", function( assert )
+    {   
+        
+    });
 });
