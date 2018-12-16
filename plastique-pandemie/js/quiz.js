@@ -1,7 +1,6 @@
 /**
  * @module quiz.js
  * @author Benjamin Bergeron
- * @author Andrew Veillette
  * @copyright 2018
  */
 
@@ -87,10 +86,10 @@ function obtenirChoix(noQuestion)
  * @param {Number} noQuestion Index de la question pour laquelle il faut afficher la bonne réponse.
  */
 function afficherBonneReponse(noQuestion) {
-	$('#modalReponse').modal("show");
 	var indexBonneReponse = obtenirBonneReponse(noQuestion);
 	document.getElementById("texteReponse").textContent = questionsQuiz[noQuestion]["choixReponse"][indexBonneReponse];
 	document.getElementById("lienPlusInfos").href = questionsQuiz[noQuestion]["lienReponse"];
+	$('#modalReponse').modal("show");
 }
 
 /**
@@ -120,7 +119,7 @@ function majTexteChoix(noQuestion)
 {
 	var choix = obtenirChoix(noQuestion);
 	for (let i = 0; i < choix.length; i++) {
-		// edit text of p
+		// edit text of span
 		document.formQuiz.options[i].nextElementSibling.textContent = choix[i];
 	}
 }
@@ -158,10 +157,9 @@ function remiseAZeroBoutons() {
  */
 function majProgression()
 {
-	var avancementPourcentage, barre;
+	var avancementPourcentage;
 	avancementPourcentage = `${questionCourante/MAX_QUESTIONS * 100}%`;
-	barre = document.getElementById("barreProgression");
-	barre.style.width = avancementPourcentage;
+	document.getElementById("barreProgression").style.width = avancementPourcentage;
 }
 
 /**
@@ -170,13 +168,12 @@ function majProgression()
  */
 function majInterface()
 {
+	document.getElementById("btnConfirmer").disabled = true;
 	majTexteChoix(questionCourante);
 	majTexteQuestion(questionCourante);
 	majNoQuestionCourant();
 	majPointage();
 	majProgression();
-	majPointage();
-	document.getElementById("btnConfirmer").disabled = true;
 }
 
 /**
@@ -196,15 +193,7 @@ function selectionnerChoix(noChoix)
  */
 function afficherBoiteFinDeJeu()
 {
-	document.getElementById("questionBox").classList.add("d-none");
-	document.getElementById("gameOverBox").classList.remove("d-none");
+	document.getElementById("questionBox").style.display = "none";
+	document.getElementById("gameOverBox").style.display = "block";
 	document.getElementById("totalScore").textContent = totalPointage;
-}
-
-function showQuizElements() {
-	var element = document.getElementById("questionBox");
-	element.classList.remove("d-none");
-	var toHide = document.getElementById("greetingBox");
-	toHide.classList.add("d-none");
-	jouerSon(introAudio);
 }

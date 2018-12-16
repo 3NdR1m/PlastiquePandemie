@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 	<title>Jeux Quiz - Plastique Pandemie - La vérité sur la santé Québec</title>
 	<meta charset="utf-8">
 	<meta name="keywords" content="Quiz,Jeux,environement,pollution,plastique,océans,eau,pop,Polluants Organiques Persistants,santé,la verité sur la santé,projet,étudiant,activisme,alimentation,plage">
-	<meta name="author" content="Benjamin Bergeron, Andrew Veillette">
+	<meta name="author" content="Benjamin Bergeron">
 	<meta name="description" content="Jeux Quiz - Plastique Pandemeie">
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/stylesheet.css">
@@ -75,24 +75,24 @@
 			<div style="background-color: dimgrey;">
 				<div id="barreProgression" class="bg-info" style="height: 5px; width: 0%;"></div>
 			</div>
-			<form id="formQuiz" class="container" name="formQuiz" method="GET">
+			<form class="container" name="formQuiz" method="GET">
 				<fieldset>
-					<legend class="text-sm-left"><span id="texteQuestion">Question</span></legend>
+					<legend class="text-sm-left" id="texteQuestion">Question</legend>
 					<div class="btn-group-toggle row text-center" data-toggle="buttons">
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix0" value="0">
+							<input type="radio" name="options" value="0">
 							<span>Option 1</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix1" value="1">
+							<input type="radio" name="options" value="1">
 							<span>Option 2</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix2" value="2">
+							<input type="radio" name="options" value="2">
 							<span>Option 3</span>
 						</label>
 						<label class="btn btn-secondary col">
-							<input type="radio" name="options" id="btnChoix3" value="3">
+							<input type="radio" name="options" value="3">
 							<span>Option 4</span>
 						</label>
 					</div>
@@ -101,7 +101,7 @@
 			</form>
 		</div>
 
-		<div id="gameOverBox" class="text-center d-none">
+		<div id="gameOverBox" class="text-center" style="display: none">
 			<h2>Fin de la partie</h2>
 			<p>Votre score: <span id="totalScore">0</span>/<span class="totalQuestions"></span></p>
 			<button id="btnNouvellePartie" class="btn btn-lg">Recommencer</button>

@@ -132,7 +132,7 @@ const tableauQuestions = [
  * @type {Array<Object>}
  * @description Liste des questions posées dans le quiz.
  * @example [{
- * 	Question:"Que vaus 1 + 1",
+ * 	Question:"Que vaux 1 + 1",
  * 	lienReponse:"index.html",
  * 	indexBonneReponse: 0,
  * 	choixReponse: [ "2", "0", "4", "-1" ]
