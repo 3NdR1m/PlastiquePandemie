@@ -33,3 +33,9 @@ body > *{
 }
 
 body > footer{ background-image: linear-gradient(#272b30, #38495a); }
+
+main {
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

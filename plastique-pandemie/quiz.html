@@ -50,7 +50,7 @@
 		</div>
 	</nav>
 	<!-- MAIN -->
-	<main class="container p-4 my-5">
+	<main class="container">
 		<h1 class="text-center">Plastique Pandemie : Le Jeux-Quiz</h1>
 		<hr>
 		<div id="greetingBox" class="text-center">
@@ -63,7 +63,7 @@
 			<button id="btnStart" type="button" class="btn btn-primary btn-lg">Démarer!</button>
 		</div>
 
-		<div id="questionBox" class="d-none">
+		<div id="questionBox" style="display: none;">
 			<div class="row" style="padding:1em;">
 				<div class="col-6">
 					<h3>Question # <span id="noQuestionCourante">1</span></h3>
@@ -141,14 +141,11 @@
 
 	<!-- SCRIPT -->
 	<script>
-		init();
 		document.getElementById("btnStart").onclick = function(){
-			majInterface();
-			document.getElementById("questionBox").classList.remove("d-none");
-			document.getElementById("greetingBox").classList.add("d-none");
+			init();
 		}
 		// Selection Option
-		document.getElementById("formQuiz").onchange = function () {
+		document.formQuiz.onchange = function () {
 			selectionnerChoix(this.options.value);
 		}
 		// Confirmer option
@@ -165,7 +162,7 @@
 				afficherBonneReponse(questionCourante);
 			}
 			
-			document.getElementById("formQuiz").reset();
+			document.formQuiz.reset();
 			remiseAZeroBoutons();
 
 			chargerQuestionSuivante();
@@ -181,9 +178,6 @@
 		//Nouvelle Partie
 		document.getElementById("btnNouvellePartie").onclick = function(){
 			init();
-			majInterface();
-			document.getElementById("questionBox").classList.remove("d-none");
-			document.getElementById("gameOverBox").classList.add("d-none");
 		}
 
 	</script>
