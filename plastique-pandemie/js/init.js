@@ -166,5 +166,11 @@ function init() {
 	questionCourante = 0;
 	totalPointage = 0;
 	choisirQuestions();
+
+	// Init interface
 	$(".totalQuestions").text(MAX_QUESTIONS);
+	document.getElementById("questionBox").style.display = "block";
+	document.getElementById("greetingBox").style.display = "none";
+	document.getElementById("gameOverBox").style.display = "none";
+	majInterface();
 }
