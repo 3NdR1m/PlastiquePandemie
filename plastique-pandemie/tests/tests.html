@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="100">
+  <meta name="viewport" content="width=device-width">
+  <title>Tests unitaires - Jeu questionnaire</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.0.css">
+
+  <!-- Bibliothèque du développeur -->
+  <script src="../js/init.js"></script>
+  <script src="../js/quiz.js"></script>
+
+  <!-- JQuery & Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.8.0.js"></script>
+  <script src="quiz_tests.js"></script>
+
+  <!-- HTML elements to test -->
+  <div style="display: none">
+    <span id="totalPoints"></span>
+    <span id="totalQuestions"></span>
+    <span id="texteQuestion"></span>
+    <span id="texteReponse"></span>
+    <span id="noQuestionCourante"></span>
+    <span id="totalScore"></span>
+    <div id="questionBox"></div>
+    <div id="gameOverBox"></div>
+    <a id="lienPlusInfos"></a>
+    <div id="barreProgression" style="width: 0%;"></div>
+    <form name="formQuiz">
+      <input type="radio" class="btn" name="options" value="0"><span></span>
+      <input type="radio" class="btn" name="options" value="1"><span></span>
+      <input type="radio" class="btn" name="options" value="2"><span></span>
+      <input type="radio" class="btn" name="options" value="3"><span></span>
+      <input type="button" id="btnConfirmer">
+    </form>
+  </div>
+</body>
+
+</html>

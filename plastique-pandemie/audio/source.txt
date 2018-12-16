@@ -1,0 +1,12 @@
+https://www.zapsplat.com/
+ CC)
+
+succes_2.mp3 & echec_2.mp3: Benjamin Bergeron
+
+Note pour compositeur:
+Sytrus => Preset => bell => "Glass"
+{
+    - reduce release
+    - modulation X = 100%
+    - modulation Y = 0%
+}

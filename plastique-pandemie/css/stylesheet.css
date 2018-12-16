@@ -1,6 +1,9 @@
 /* Met l'image de fond */
 body {
-    background: url('../images/background.jpg') no-repeat fixed center;
+    background: url('../images/background.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -18,7 +21,7 @@ body {
     overflow: hidden;
 }
 .navbar-brand > p { transition: all 0.5s; transform: translateY(-3em);}
-.navbar-brand > p:hover { transform: translateY(0em); }
+.navbar-brand:hover > p { transform: translateY(0em); }
 
 /* Autre */
 hr { background-color: white; }
